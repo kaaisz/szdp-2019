@@ -23,3 +23,32 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+$font-stack: "Helvatica Neue", "Arial", "Helvatica", sans-serif;
+$font-description: "Georgia", "Times New Roman", serif;
+$primary-color: #222;
+$secondary-color: #555;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+a,
+a:hover {
+  color: $primary-color;
+}
+
+p {
+  font-family: $font-description;
+  color: $secondary-color;
+}
