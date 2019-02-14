@@ -1,7 +1,11 @@
 <article @php post_class() @endphp>
   <header>
-    <h1 class="entry-title">{!! get_the_title() !!}</h1>
-    @include('partials/entry-meta')
+    <div class="article__title-wrap">
+      <h1 class="article__title left">{!! get_the_title() !!}</h1>
+      <div class="article__detail_wrap">
+        @include('partials/entry-meta')
+      </div>
+    </div>
   </header>
   <div class="entry-content">
     @php the_content() @endphp
