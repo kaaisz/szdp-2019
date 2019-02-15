@@ -65,16 +65,16 @@ p {
   font-family: $font-descriptions;
 }
 
+a {
+  color: $primary-color;
+}
+
 ul {
   padding: 0;
 }
 
 li {
   list-style: none;
-
-  a {
-    color: $primary-color;
-  }
 }
 
 strong {
@@ -103,6 +103,7 @@ section {
   width: 100vw;
   padding: 15px 0 0 15px;
   z-index: 5;
+  position: relative;
 
   @include mq() {
     height: 14vh;
@@ -111,6 +112,8 @@ section {
 
   .logo.header-logo {
     position: fixed;
+    top: 2.125rem;
+    left: 2.125rem;
     width: 15%;
     height: 15%;
     margin: 0;
@@ -381,6 +384,11 @@ section {
       width: 350px;
     }
   }
+}
+
+.works__img-wrap > img {
+  width: 100%;
+  height: auto;
 }
 
 .bio {
@@ -679,4 +687,8 @@ section {
   border-bottom: 20px solid transparent;
   border-left: 20px solid $primary-color;
   line-height: 0;
+}
+
+.page-header {
+  padding: 2.125rem;
 }
