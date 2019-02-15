@@ -48,7 +48,7 @@
   @section('content')
   <!-- @include('partials.page-header') -->
 
-  <section>
+  <section id="works">
     <h2>Case Study</h2>
     @if (!have_posts())
       <div class="alert alert-warning">

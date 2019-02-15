@@ -23,7 +23,7 @@
         <p>&copy;SZDP 2018</p>
         <a onclick="topFunction()" id="scrollBtn" class="scroll-arrow to-top" href="#header">Top↑</a>
       </div>
-    <script type="text/Javascript" src="assets/js/script.js"></script>
+    <script src="<?= get_template_directory_uri(); ?>/assets/scripts/main.js"></script>
     <!-- @php dynamic_sidebar('sidebar-footer') @endphp -->
   </div>
 </footer>

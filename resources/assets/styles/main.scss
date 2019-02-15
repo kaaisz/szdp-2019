@@ -84,7 +84,6 @@ strong {
 section {
   width: 100vw;
   min-height: 100vh;
-  // z-index: -3;
   padding: 15px;
 
   @include mq() {
@@ -102,7 +101,6 @@ section {
 .header {
   width: 100vw;
   padding: 15px 0 0 15px;
-  z-index: 5;
   position: relative;
 
   @include mq() {
@@ -118,7 +116,6 @@ section {
     height: 15%;
     margin: 0;
     padding: 0;
-    z-index: 5;
 
     @include mq() {
       width: 64px;
@@ -136,6 +133,7 @@ section {
   margin: 30px 15px 0 0;
   background: none;
   border: none;
+  cursor: pointer;
 
   @include mq() {
     margin: 3.25rem 3rem 0 0;
@@ -150,7 +148,6 @@ section {
     background: $primary-color;
     display: block;
     content: "";
-    z-index: 5;
   }
 
   .menu__bar::before {
@@ -180,7 +177,6 @@ section {
   padding: 103px 20px;
   text-align: left;
   font-size: $font-175;
-  z-index: 3;
 
   @include mq() {
     justify-content: center;
@@ -493,27 +489,32 @@ section {
   }
 }
 
+.article__img_xl {
+  img {
+    width: 100vw;
+    height: auto;
+    margin-bottom: 4.25rem;
+  }
+}
+
 .entry-content {
-  figure {
-    margin: 0;
-
-    img {
-      width: 100vw;
-      height: auto;
-    }
-  }
-
-  h2,
-  p {
-    max-width: 700px;
-  }
-
   h2 {
+    max-width: 700px;
     font-size: $font-150;
     margin: 4.25rem auto;
   }
 
+  img {
+    width: 100%;
+    padding: 0 8rem;
+  }
+
+  figure {
+    margin: 0;
+  }
+
   p {
+    max-width: 700px;
     font-size: 15px;
     margin: 0 auto 1.5rem;
     line-height: 1.7;
@@ -543,7 +544,6 @@ section {
 
     h1 {
       font-size: 2rem;
-      line-height: 1;
 
       @include mq() {
         font-size: 3rem;
@@ -559,6 +559,7 @@ section {
   &__title.left,
   &__detail_wrap {
     margin-bottom: 2.5rem;
+    line-height: 1.25;
 
     @include mq() {
       margin-bottom: 0;
