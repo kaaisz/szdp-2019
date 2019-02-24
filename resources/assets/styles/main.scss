@@ -1,14 +1,24 @@
 @charset "UTF-8";
-$font-stack: Arial, Helvetica, sans-serif;
+
+@font-face {
+  font-family: "Futura";
+  src: url(../woff/FuturaBT-Book.woff);
+}
+
+@font-face {
+  font-family: "Apercu";
+  src: url(../woff/Apercu-Light.woff);
+}
+
+$font-stack:"Futura", Arial, Helvetica, sans-serif;
 $font-stack-jp: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "Osaka", "Meiryo UI", "メイリオ", sans-serif;
 
-$font-descriptions: "Georgia", "Times New Roman", Times, serif;
-
+$font-descriptions: "Helvetica Neue Light", sans-serif;
 $font-descriptions-jp: "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
 
-$primary-color: #222;
+$primary-color:#222;
 $secondary-color: #555;
-$bgcolor: #fafafa;
+$bgcolor:#fafafa;
 $font-xl: 200%;
 $font-175: 175%;
 $font-150: 150%;
@@ -35,10 +45,11 @@ $breakpoints: (
 * {
   box-sizing: border-box;
   font-family: $font-stack;
-  font-weight: normal;
+  font-weight: 200;
   text-decoration: none;
   list-style-type: none;
   line-height: 1.5;
+  outline: none;
 
   ::before,
   ::after {
@@ -54,7 +65,8 @@ body {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
+  text-transform: uppercase;
 
   @include mq() {
     font-size: 4.125rem;
@@ -63,18 +75,15 @@ h2 {
 
 p {
   font-family: $font-descriptions;
-}
-
-a {
-  color: $primary-color;
+  font-weight: 300;
 }
 
 ul {
   padding: 0;
 }
 
-li {
-  list-style: none;
+a {
+  color: $primary-color;
 }
 
 strong {
@@ -98,105 +107,161 @@ section {
   }
 }
 
+.section__title {
+  margin: 0 0 2rem;
+  font-size: $font-xl;
+  letter-spacing: 5px;
+
+  @include mq() {
+    font-size: 4.125rem;
+    letter-spacing: 10px;
+  }
+}
+
 .header {
   width: 100vw;
   padding: 15px 0 0 15px;
-  position: relative;
 
   @include mq() {
-    height: 14vh;
+    height: 10vh;
     padding: 2.125rem 2.125rem 0;
   }
 
-  .logo.header-logo {
+  &__logo {
     position: fixed;
-    top: 2.125rem;
-    left: 2.125rem;
     width: 15%;
-    height: 15%;
+    height: auto;
     margin: 0;
     padding: 0;
+    z-index: 2;
 
     @include mq() {
       width: 64px;
-      height: 75px;
+      height: auto;
     }
   }
 }
 
-.menu__hamburger-bar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 30px;
-  height: 30px;
-  margin: 30px 15px 0 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-
-  @include mq() {
-    margin: 3.25rem 3rem 0 0;
-  }
-
-  .menu__bar,
-  .menu__bar::before,
-  .menu__bar::after {
+.nav {
+  &__bar {
     position: absolute;
-    height: 3px;
+    height: 2px;
     width: 30px;
     background: $primary-color;
     display: block;
     content: "";
+
+    &:nth-of-type(1) {
+      top: 0;
+      animation: squeeze-top 0.75s backwards;
+    }
+
+    &:nth-of-type(2) {
+      top: 10px;
+      transition: all 0.3s 0.3s;
+      opacity: 1;
+    }
+
+    &:nth-of-type(3) {
+      bottom: 0;
+      animation: squeeze-btm 0.75s backwards;
+    }
+
+    @keyframes squeeze-top {
+      0% { transform: translateY(10px) rotate(45deg); }
+      50% { transform: translateY(10px) rotate(0); }
+      100% { transform: translateY(0) rotate(0); }
+    }
+
+    @keyframes squeeze-btm {
+      0% { transform: translateY(-10px) rotate(-45deg); }
+      50% { transform: translateY(-10px) rotate(0); }
+      100% { transform: translateY(0) rotate(0); }
+    }
   }
 
-  .menu__bar::before {
-    bottom: -9px;
+  &__toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 22px;
+    margin: 30px 15px 0 0;
+    background: none;
+    border: none;
+    z-index: 2;
+
+    @include mq() {
+      margin: 3.25rem 3rem 0 0;
+    }
+
+    &.open {
+      .nav__bar:nth-of-type(1) {
+        animation: squeeze-top-open 0.75s forwards;
+      }
+
+      .nav__bar:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      .nav__bar:nth-of-type(3) {
+        animation: squeeze-btm-open 0.75s forwards;
+      }
+    }
+
+    @keyframes squeeze-top-open {
+      0% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(10px) rotate(0); }
+      100% { transform: translateY(10px) rotate(45deg); }
+    }
+
+    @keyframes squeeze-btm-open {
+      0% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(-10px) rotate(0); }
+      100% { transform: translateY(-10px) rotate(-45deg); }
+    }
   }
 
-  .menu__bar::after {
-    bottom: -18px;
-  }
-}
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    transition: all 0.6s ease;
+    transform: translateX(20vw);
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $bgcolor;
+    list-style: none;
+    margin: 0;
+    padding: 103px 20px;
+    text-align: left;
+    font-size: $font-175;
+    z-index: -1;
 
-.menu__nav-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  transition: all 0.5s ease-in;
-  transform: translateX(100vw);
-  opacity: 0;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: $bgcolor;
-  list-style: none;
-  margin: 0;
-  padding: 103px 20px;
-  text-align: left;
-  font-size: $font-175;
+    @include mq() {
+      justify-content: center;
+      padding: 120px;
+      font-size: 32px;
+    }
 
-  @include mq() {
-    justify-content: center;
-    padding: 120px;
-    font-size: 32px;
-  }
+    &.open {
+      opacity: 1;
+      transform: translateX(0);
+      z-index: 1;
+    }
 
-  &.open {
-    // display: block;
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .language {
-    text-align: right;
+    .language {
+      text-align: right;
+    }
   }
 }
 
 .top {
-  height: calc(100vh - 45px);
+  height: calc(100vh - 10vh);
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
@@ -212,7 +277,7 @@ section {
     position: relative;
   }
 
-  .top__title-wrap {
+  &__title-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -220,29 +285,30 @@ section {
     @include mq() {
       align-items: flex-start;
     }
+  }
 
-    .top__title {
-      margin: 1.25rem 0 0;
-      font-size: $font-175;
-      // font-weight: bold;
+  &__title {
+    margin: 1.25rem 0 0;
+    font-size: $font-150;
+    letter-spacing: 4px;
 
-      @include mq() {
-        font-size: 4.125rem;
-      }
-    }
-
-    .top__description {
-      font-size: 95%;
-      margin: 10px;
-
-      @include mq() {
-        font-size: 2.25rem;
-        margin: 0.5rem 0;
-      }
+    @include mq() {
+      font-size: 4.125rem;
     }
   }
 
-  .top__img-wrap {
+  &__description {
+    font-size: 100%;
+    margin: 10px;
+    letter-spacing: 0.5px;
+
+    @include mq() {
+      font-size: 2.25rem;
+      margin: 0.5rem 0;
+    }
+  }
+
+  &__img-wrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -251,13 +317,13 @@ section {
     @include mq() {
       flex-direction: row;
     }
+  }
 
-    .logo {
-      width: 80%;
+  &__logo {
+    width: 70vw;
 
-      @include mq() {
-        width: 30vw;
-      }
+    @include mq() {
+      width: 30vw;
     }
   }
 }
@@ -265,13 +331,12 @@ section {
 .social {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 15px 0;
   font-size: $font-175;
 
   @include mq() {
     font-size: 2.25rem;
-    justify-content: flex-start;
 
     a:first-child > li {
       padding-left: 0;
@@ -315,7 +380,6 @@ section {
   }
 
   &.to-top {
-    // position: absolute;
     right: 0;
   }
 }
@@ -343,23 +407,107 @@ section {
   }
 }
 
-.works {
+.works,
+.bio,
+.contact {
   padding: 0 15px 15px;
 
   @include mq() {
-    padding: 2.125rem 8rem;
+    padding: 1.5rem 8rem;
+  }
+}
+
+.works {
+  &__img-wrap {
+    position: relative;
+
+    img {
+      transition: all 0.3s ease;
+    }
+
+    .featured img {
+      height: 300px;
+      width: 200px;
+    }
+
+    &__description-wrap {
+      transition: all 0.3s ease;
+
+      @include mq() {
+        width: 45%;
+        position: absolute;
+        bottom: 1rem;
+        opacity: 0;
+
+        &.data1,
+        &.data3,
+        &.data5 {
+          right: 0;
+        }
+
+        &.data2,
+        &.data4,
+        &.data6 {
+          left: 0;
+        }
+      }
+    }
+
+    &:hover img {
+      opacity: 0.35;
+      transition: all 0.3s ease;
+    }
+
+    &:hover .works__description-wrap {
+      opacity: 1;
+      transition: all 0.4s ease;
+    }
   }
 
-  .works__img {
+  &__img {
     width: 100%;
     height: auto;
+    margin: 5rem 0 2rem;
+
+    @include mq() {
+      margin: 12rem 0 0 0;
+
+      &.data1 {
+        padding: 0 25rem 0 0;
+      }
+
+      &.data2 {
+        padding: 0 0 0 10rem;
+      }
+
+      &.data3 {
+        padding: 0 14rem 0 0;
+      }
+
+      &.data4 {
+        padding: 2rem 0 0 30rem;
+      }
+
+      &.data5 {
+        padding: 10rem 25rem 0 0;
+      }
+
+      &.data6 {
+        padding: 5rem 0 0 20rem;
+      }
+    }
   }
 
-  .works__title {
-    font-size: $font-175;
+  &__title {
+    font-size: $font-150;
+    margin: 0;
+
+    @include mq() {
+      font-size: 250%;
+    }
   }
 
-  .works__tag {
+  &__tag {
     font-size: $font-xs;
     color: $secondary-color;
 
@@ -370,34 +518,138 @@ section {
 
   .button {
     display: block;
-    width: 70%;
+    background: none;
+    border: 0;
     text-align: center;
-    padding: 1rem 0;
-    margin: 20px auto;
-    border: 1px solid $primary-color;
+    box-sizing: border-box;
+    margin: 5rem auto 10rem;
+    padding: 1em 2em;
+
+    // Using inset box-shadow instead of border for sizing simplicity
+    box-shadow: inset 0 0 0 1px $primary-color;
+    color: $primary-color;
+
+    // Required, since we're setting absolute on pseudo-elements
+    position: relative;
+
+    &::before,
+    &::after {
+      box-sizing: inherit;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
 
     @include mq() {
-      width: 350px;
+      margin: 10rem auto;
+    }
+  }
+
+  .draw {
+    transition: color 0.2s;
+
+    &::before,
+    &::after {
+      // Set border to invisible, 
+      // so we don't see a border on a 0x0 element before the transition starts
+      border: 2px solid transparent;
+      width: 0;
+      height: 0;
+    }
+
+    // This covers the top & right borders (expands right, then down)
+    &::before {
+      top: 0;
+      left: 0;
+    }
+
+    // And this the bottom & left borders (expands left, then up)
+    &::after {
+      bottom: 0;
+      right: 0;
+    }
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    // Hover styles
+    &:hover::before,
+    &:hover::after {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover::before {
+      border-top-color: $primary-color; // Make borders visible
+      border-right-color: $primary-color;
+      transition:
+        // Width expands first
+        width 0.15s ease-out,
+        // And then height
+        height 0.15s ease-out 0.15s;
+    }
+
+    &:hover::after {
+      border-bottom-color: $primary-color; // Make borders visible
+      border-left-color: $primary-color;
+      transition:
+        // Wait for before to finish before showing border
+        border-color 0s ease-out 0.15s,
+        // And then exanding width
+        width 0.15s ease-out 0.15s,
+        // And finally height
+        height 0.15s ease-out 0.15s;
+    }
+  }
+
+  // Inherits from .draw
+  .meet {
+    &:hover {
+      color: $primary-color;
+    }
+
+    // Start ::after in same position as ::before
+    &::after {
+      top: 0;
+      left: 0;
+    }
+
+    // Change colors
+    &:hover::before {
+      border-top-color: $primary-color;
+      border-right-color: $primary-color;
+    }
+
+    &:hover::after {
+      border-bottom-color: $primary-color;
+      border-left-color: $primary-color;
+      transition:
+        // Animate height first, then width
+        height 0.15s ease-out,
+        width 0.15s ease-out 0.15s;
+    }
+
+    @include mq() {
+      width: 320px;
+      font-size: $font-125;
     }
   }
 }
 
-.works__img-wrap > img {
-  width: 100%;
-  height: auto;
-}
-
 .bio {
-  .bio_wrap {
+  &__wrap {
     display: flex;
     flex-direction: column-reverse;
+    margin: 0 0 10rem;
 
     @include mq() {
       flex-direction: row;
     }
   }
 
-  .bio__img {
+  &__img {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -405,13 +657,18 @@ section {
     align-items: center;
   }
 
-  .bio__name {
+  &__name {
     font-size: $font-150;
 
     @include mq() {
       font-size: $font-xl;
       margin-top: 0;
+      line-height: 1.45;
     }
+  }
+
+  &__caption {
+    margin: 0.5rem 0;
   }
 
   @include mq() {
@@ -425,22 +682,26 @@ section {
   }
 }
 
-.section__title {
-  margin-top: 0;
+.skills {
+  padding: 1.5rem 0;
 
-  @include mq() {
-    font-size: 4.125rem;
+  &__head {
+    font-size: 23px;
+    margin: 16px 0;
   }
-}
 
-.section__title__skill {
-  font-size: 23px;
-  margin: 16px 0;
-}
+  &__list {
+    padding: 0 1.5rem;
 
-.skills__other {
-  font-size: 18px;
-  margin: 15px 0;
+    ul li {
+      list-style-type: disc;
+    }
+  }
+
+  &__other {
+    font-size: 18px;
+    margin: 15px 0;
+  }
 }
 
 .contact {
@@ -456,12 +717,12 @@ section {
     min-height: calc(100vh - 13vh);
   }
 
-  .contact__title {
-    margin: 6rem 0 0;
+  &__title {
+    margin: 4rem 0 0;
     padding: 0;
   }
 
-  .contact__description {
+  &__description {
     font-size: 1rem;
 
     @include mq() {
@@ -469,10 +730,10 @@ section {
     }
   }
 
-  .contact__mailto {
+  &__mailto {
     display: inline-block;
     margin: 1rem 0;
-    font-size: 2rem;
+    font-size: 1.65rem;
   }
 }
 
@@ -487,38 +748,10 @@ section {
     height: 13vh;
     padding: 2.35rem 2.125rem;
   }
-}
-
-.article__img_xl {
-  img {
-    width: 100vw;
-    height: auto;
-    margin-bottom: 4.25rem;
-  }
-}
-
-.entry-content {
-  h2 {
-    max-width: 700px;
-    font-size: $font-150;
-    margin: 4.25rem auto;
-  }
-
-  img {
-    width: 100%;
-    padding: 0 8rem;
-  }
-
-  figure {
-    margin: 0;
-  }
 
   p {
-    max-width: 700px;
-    font-size: 15px;
-    margin: 0 auto 1.5rem;
-    line-height: 1.7;
-    letter-spacing: -0.25px;
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -544,6 +777,7 @@ section {
 
     h1 {
       font-size: 2rem;
+      line-height: 1.35;
 
       @include mq() {
         font-size: 3rem;
@@ -559,7 +793,6 @@ section {
   &__title.left,
   &__detail_wrap {
     margin-bottom: 2.5rem;
-    line-height: 1.25;
 
     @include mq() {
       margin-bottom: 0;
@@ -567,10 +800,18 @@ section {
     }
   }
 
+  &__main {
+    padding: calc(2.5rem - 15px) 0;
+
+    @include mq() {
+      padding: 8rem 0;
+    }
+  }
+
   &__section-title {
     font-size: $font-125;
     font-family: $font-stack-jp;
-    margin: 4.25rem auto;
+    margin: 0 auto calc(2.5rem - 15px);
 
     @include mq() {
       font-size: $font-150;
@@ -579,7 +820,7 @@ section {
   }
 
   &__main_content {
-    padding: 0 15px;
+    padding: 15px;
 
     @include mq() {
       max-width: 700px;
@@ -598,6 +839,7 @@ section {
   &__img_lg,
   .related-article__img {
     width: 100%;
+    height: auto;
   }
 
   &__img_lg {
@@ -623,27 +865,17 @@ section {
   }
 
   @include mq() {
-    .related-article__content:nth-of-type(1) {
+    &__content:nth-of-type(1) {
       margin-right: 0.5rem;
     }
 
-    .related-article__content:nth-of-type(2) {
+    &__content:nth-of-type(2) {
       margin: 0 0.5rem;
     }
 
-    .related-article__content:nth-of-type(3) {
+    &__content:nth-of-type(3) {
       margin-left: 0.5rem;
     }
-  }
-}
-
-.pager__wrap {
-  display: flex;
-  align-items: center;
-  margin: 0 15px;
-
-  @include mq() {
-    margin: 0 8rem;
   }
 }
 
@@ -652,6 +884,34 @@ section {
   display: inline-block;
   width: 50%;
   font-size: $font-150;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    @include mq() {
+      margin: 0 8rem;
+    }
+  }
+
+  &__arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid $primary-color;
+    line-height: 0;
+  }
+
+  &__arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid $primary-color;
+    line-height: 0;
+  }
 
   &.left {
     text-align: left;
@@ -672,24 +932,53 @@ section {
   }
 }
 
-.pager__arrow-left {
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 20px solid $primary-color;
-  line-height: 0;
-}
+.archive {
+  width: 100%;
+  margin: 80px 0 10rem;
 
-.pager__arrow-right {
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid $primary-color;
-  line-height: 0;
-}
+  @include mq() {
+    margin: 0 0 10rem;
+  }
 
-.page-header {
-  padding: 2.125rem;
+  &__flex-wrap {
+    display: flex;
+    flex-direction: column;
+
+    @include mq() {
+      flex-direction: row;
+    }
+  }
+
+  &__img-wrap {
+    width: 100%;
+    margin: 0 0 5rem;
+
+    @include mq() {
+      &:nth-of-type(odd) {
+        padding-right: 1rem;
+      }
+
+      &:nth-of-type(even) {
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__title {
+    margin: 0.85rem 0;
+    font-size: $font-150;
+  }
+
+  &__tag {
+    font-size: $font-xs;
+    color: $secondary-color;
+
+    @include mq() {
+      font-size: $font-sm;
+    }
+  }
 }

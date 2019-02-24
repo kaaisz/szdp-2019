@@ -9,17 +9,17 @@
   </header>
     @php
       if ( has_post_thumbnail() ) {
-        echo '<div class="article__img_xl">';
-        the_post_thumbnail();
-        echo '</div>';
+        the_post_thumbnail('large', array('class' => 'article__img_xl'));
       };
     @endphp
-  <div class="entry-content">
-    <?php 
-      //  disable <p> 
-      remove_filter('the_content', 'wpautop');
-      the_content();
-    ?>
+  <div class="article__main">
+    <div class="entry-content">
+      <?php 
+        // to disable <p> 
+        remove_filter('the_content', 'wpautop');
+        the_content();
+      ?>
+    </div>
   </div>
   <footer>
     {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}

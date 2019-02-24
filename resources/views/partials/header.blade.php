@@ -1,33 +1,34 @@
 <header id="header" class="header">
-  <h1 class="logo header-logo">
+  <h1 class="header__logo">
     <a href="{{ home_url('/') }}">
       <img src="<?= get_template_directory_uri(); ?>/assets/svg/szdplogo-for-web.svg" />
     </a>
   </h1>
   <!-- //hamburger menu// -->
-  <nav>
-    <div id="nav__toggle" class="menu__hamburger-bar" onclick="hamburgerToggle()">
-      <div id="menu__nav-menu">
-      <span class="menu__bar"></span>
-      <span class="menu__bar"></span>
-      <span class="menu__bar"></span>
-      </div>
-    </button>
-    <!-- //"menu__nav-list" will be a toggle class for open and close// -->
-    <ul id="menu__nav-list" class="menu__nav-menu">
-      <a href="#bio"><li>BIOGRAPHY</li></a>
-      <a href="#works"><li>CASE STUDY</li></a>
-        <ul id="menu__nav-list sub">
-          <a href="zmagazine.html"><li>Z Magazine</li></a>
-          <a href="mylocal.html"><li>MyLocal</li></a>
-          <a href="greentable.html"><li>Green Table</li></a>
-          <a href="grabbbb.html"><li>Grabbbb</li></a>
-          <a href="shiori.html"><li>Shiori</li></a>
-          <a href="tnr-acid.html"><li>Tenori Acid</li></a>
+  <nav class="nav">
+    <div id="nav__toggle" class="nav__toggle">
+      <span class="nav__bar"></span>
+      <span class="nav__bar"></span>
+      <span class="nav__bar"></span>
+    </div>
+    <!-- //"nav__list" will be a toggle class for open and close// -->
+    <ul id="nav__list" class="nav__list">
+      <a class="nav__link" href="#works"><li>CASE STUDY</li></a>
+        <ul>
+          <a class="nav__link" href="zmagazine.html"><li>Z Magazine</li></a>
+          <a class="nav__link" href="mylocal.html"><li>MyLocal</li></a>
+          <a class="nav__link" href="greentable.html"><li>Green Table</li></a>
+          <a class="nav__link" href="grabbbb.html"><li>Grabbbb</li></a>
+          <a class="nav__link" href="shiori.html"><li>Shiori</li></a>
+          <a class="nav__link" href="tnr-acid.html"><li>Tenori Acid</li></a>
         </ul>
       </li>
-      <li>SKILL</li>
-      <li>CONTACT</li>
+      <a class="nav__link" href="#bio"><li>BIOGRAPHY</li></a>
+      <a class="nav__link" href="#skills"><li>SKILL</li></a>
+      <a class="nav__link" href="#contact"><li>CONTACT</li></a>
+      <div class="language">
+        <li>EN / <a class="lang" href="jp/index.html">JP</a></li>
+      </div>
     </ul>
   </nav>
 </header>
