@@ -153,15 +153,17 @@ section {
 
   &__logo {
     position: fixed;
+    top: 0;
     width: 15%;
     height: auto;
-    margin: 0;
+    margin: 15px 0 0 0;
     padding: 0;
     z-index: 2;
 
     @include mq() {
       width: 64px;
       height: auto;
+      margin: 25px 0 0 0;
     }
   }
 }
@@ -216,7 +218,7 @@ section {
     z-index: 2;
 
     @include mq() {
-      margin: 3.25rem 3rem 0 0;
+      margin: 50px 3rem 0 0;
     }
 
     &.open {
@@ -445,13 +447,18 @@ section {
   &__img-wrap {
     position: relative;
 
-    img {
-      transition: all 0.3s ease;
+    @include mq() {
+      &:nth-of-type(odd) {
+        padding: 0 25rem 0 0;
+      }
+
+      &:nth-of-type(even) {
+        padding: 0 0 0 25rem;
+      }
     }
 
-    .featured img {
-      height: 300px;
-      width: 200px;
+    img {
+      transition: all 0.3s ease;
     }
 
     &__description-wrap {
@@ -576,7 +583,7 @@ section {
     &::before,
     &::after {
       // Set border to invisible, 
-      // so we don't see a border on a 0x0 element before the transition starts
+      // so we don't see border on a 0x0 element before the transition starts
       border: 2px solid transparent;
       width: 0;
       height: 0;
@@ -619,7 +626,7 @@ section {
       border-bottom-color: $primary-color; // Make borders visible
       border-left-color: $primary-color;
       transition:
-        // Wait for before to finish before showing border
+        // Wait for 'before' to finish before showing border
         border-color 0s ease-out 0.15s,
         // And then exanding width
         width 0.15s ease-out 0.15s,
@@ -802,6 +809,7 @@ section {
     h1 {
       font-size: 2rem;
       line-height: 1.35;
+      margin: 1.875rem 0 0;
 
       @include mq() {
         font-size: 3rem;
@@ -810,16 +818,31 @@ section {
 
     h1,
     p {
-      margin: 0;
+      @include mq() {
+        margin: 0;
+      }
     }
   }
 
-  &__title.left,
+  &__title {
+    margin-bottom: 2.5rem;
+
+    @include mq() {
+      margin: 0 1rem 0 0;
+      width: 50%;
+    }
+  }
+
+  &__description {
+    margin: 1rem 0;
+    color: $secondary-color;
+  }
+
   &__detail_wrap {
     margin-bottom: 2.5rem;
 
     @include mq() {
-      margin-bottom: 0;
+      margin: 0 0 0 1rem;
       width: 50%;
     }
   }
@@ -860,8 +883,7 @@ section {
   }
 
   &__img_xl,
-  &__img_lg,
-  .related-article__img {
+  &__img_lg {
     width: 100%;
     height: auto;
   }
@@ -879,7 +901,7 @@ section {
   padding: 15px;
 
   @include mq() {
-    padding: 8rem;
+    padding: 0 8rem;
   }
 
   &__content-wrap {
@@ -901,6 +923,11 @@ section {
       margin-left: 0.5rem;
     }
   }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .pager {
@@ -913,45 +940,63 @@ section {
     display: flex;
     align-items: center;
     margin: 0;
+    clear: both;
+    padding: 3rem 0 0;
 
     @include mq() {
-      margin: 0 8rem;
+      padding: 8rem 0 0;
     }
   }
 
   &__arrow-left {
     width: 0;
     height: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-right: 20px solid $primary-color;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid $primary-color;
     line-height: 0;
+
+    @include mq() {
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid $primary-color;
+    }
   }
 
   &__arrow-right {
     width: 0;
     height: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid $primary-color;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid $primary-color;
     line-height: 0;
+
+    @include mq() {
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid $primary-color;
+    }
   }
 
   &.left {
     text-align: left;
     margin: 0 15px;
+    font-size: $font-sm;
 
     @include mq() {
       margin: 0 1.2rem;
+      font-size: 100%;
     }
   }
 
   &.right {
     text-align: right;
     margin: 0 15px;
+    font-size: $font-sm;
 
     @include mq() {
       margin: 0 1.2rem;
+      font-size: 100%;
     }
   }
 }
@@ -961,7 +1006,7 @@ section {
   margin: 80px 0 10rem;
 
   @include mq() {
-    margin: 0 0 10rem;
+    margin: 0;
   }
 
   &__flex-wrap {
@@ -969,7 +1014,7 @@ section {
     flex-direction: column;
 
     @include mq() {
-      flex-direction: row;
+      display: block;
     }
   }
 
@@ -978,6 +1023,10 @@ section {
     margin: 0 0 5rem;
 
     @include mq() {
+      width: 50%;
+      min-height: 600px;
+      float: left;
+
       &:nth-of-type(odd) {
         padding-right: 1rem;
       }
@@ -990,6 +1039,12 @@ section {
 
   &__img {
     width: 100%;
+    height: 280px;
+    object-fit: cover;
+
+    @include mq() {
+      height: 360px;
+    }
   }
 
   &__title {
