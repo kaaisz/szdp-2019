@@ -4,17 +4,11 @@
       <h1 class="article__title left">{!! get_the_title() !!}</h1>
       <div class="article__detail_wrap">
         <!-- @include('partials/entry-meta') -->
-        <p class="article__description">
-          This is a kind of Web magazine which curated by me, as my 2nd vision.
-          Pictures are purposely ordered arrenging random to trying
-          to keep our eyes each piece of pictures without reading.
-        </p>
+        <p class="article__description">{!! post_custom('description'); !!}</p>
         <h3 class="article__detail">Responsibility</h3>
-        <p class="article__detail_description">{!! the_tags('', ' / ', ''); !!}</p>
-        <h3 class="article__detail">Created by</h3>
-        <p class="article__detail_description">
-          Sketch / Adobe XD / Figma / Adobe Illustrator/React.js
-        </p>
+        <p class="article__detail_description">{!! post_custom('responsibility'); !!}</p>
+        <h3 class="article__detail">Created with</h3>
+        <p class="article__detail_description">{!! post_custom('created_with'); !!}</p>
       </div>
     </div>
   </header>
