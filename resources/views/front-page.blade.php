@@ -1,3 +1,4 @@
+<!-- front-page - when accessed suzydp.net for the first time -->
 @extends('layouts.app')
 @section('content')
   <!-- @include('partials.page-header') -->
@@ -54,11 +55,16 @@
       </div>
       {!! get_search_form(false) !!}
     @endif
-
-    <?php 
-      $posts = get_posts();
-      $cnt = 0;
-    while(have_posts()) : the_post(); ?>
+    
+      <?php
+        global $post;
+        $args = (array(
+          'posts_per_page' => 6, // 表示件数
+          'category' => '3' // カテゴリIDもしくはスラッグ名
+        ));
+        $posts = get_posts($args);
+          foreach($posts as $post):
+            setup_postdata($post); ?>
       <div class="works__img-wrap">
         <a href="<?php the_permalink(); ?>">
           <?php the_post_thumbnail('large', array('class' => 'works__img'));?>
@@ -68,11 +74,13 @@
           </div>
         </a>
       </div>
-    <?php endwhile; ?>
-
-    <!-- <div class="viewmore"> -->
+      <?php 
+        endforeach;
+        wp_reset_postdata(); 
+      ?>
+      
       <a class="button draw meet" href="<?php echo(get_category_link(3))?>">View More</a>
-    <!-- </div> -->
+
   </section>
 
   <!-- bio/skills -->
