@@ -20,7 +20,7 @@
         </div>
       </section>
       <div class="footer__copyright">
-        <p>&copy;SZDP 2018</p>
+        <p>&copy;SZDP <?php echo date(Y);?></p>
         <a onclick="topFunction()" id="scrollBtn" class="scroll-arrow to-top" href="#header">Top↑</a>
       </div>
     <script src="<?= get_template_directory_uri(); ?>/assets/scripts/main.js"></script>

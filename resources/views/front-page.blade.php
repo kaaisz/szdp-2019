@@ -69,7 +69,7 @@
         <a href="<?php the_permalink(); ?>">
           <?php the_post_thumbnail('large', array('class' => 'works__img'));?>
           <div class="works__description-wrap">
-            <h3 class="works__title"><?php the_title(); ?></h3>
+            <?php the_title('<h3 class="works__title">', '</h3>'); ?>
             <p class="works__tag"><?php the_tags('', ' / ', '');?></p>
           </div>
         </a>
