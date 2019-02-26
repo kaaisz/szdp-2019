@@ -929,8 +929,9 @@ section {
   }
 
   &__img {
-    width: 100%;
-    height: auto;
+    width: 330.67px;
+    height: 250px;
+    object-fit: cover;
   }
 }
 

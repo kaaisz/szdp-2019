@@ -19,34 +19,48 @@
     @endphp
   <div class="article__main">
     <div class="entry-content">
-      @php
-        // to disable <p> 
+      <?php
+        // to disable <p>
         remove_filter('the_content', 'wpautop');
         the_content();
-      @endphp
+      ?>
     </div>
   </div>
+
   <div class="related-article">
     <h2 class="related-article__title">See other Projects</h2>
     <div class="related-article__content-wrap">
+    <?php
+      // if some of categories are set, get either one by random
+      $categories = wp_get_post_categories($post -> ID, array('orderby' => 'rand'));
+      // setting up element from all the articles
+      if($categories) {
+        $args = array(
+          'category__in' => array($categories[0]), // get category by ID
+          'post__not_in' => array($post -> ID), // exclude articles which is already shown
+          'showposts' => 3, // numbers of articles which you want to get
+          'caller_get_posts' => 1, // to show the articles from number 1 
+          'orderby' => 'rand' // random order
+        );
+      }
+      $query = new WP_Query($args);
+      if( $query -> have_posts() ) {
+        while( $query -> have_posts() ) { 
+          $query -> the_post(); 
+    ?>
       <div class="related-article__content">
-        <a href="zmagazine.html">
-          <img class="related-article__img" src="https://dummyimage.com/800x600/000000/fff" />
-          <h3>Z magazine</h3>
+        <a href="<?php the_permalink(); ?>">
+          <?php the_post_thumbnail('large', array('class' => 'related-article__img'));?>
+          <h3><?php the_title(); ?></h3>
         </a>
       </div>
-      <div class="related-article__content">
-        <a href="zmagazine.html">
-          <img class="related-article__img" src="https://dummyimage.com/800x600/000000/fff" />
-          <h3>MyLocal</h3>
-        </a>
-      </div>
-      <div class="related-article__content">
-        <a href="zmagazine.html">
-          <img class="related-article__img" src="https://dummyimage.com/800x600/000000/fff" />
-          <h3>PARC website</h3>
-        </a>
-      </div>
+        <?php 
+        } 
+        wp_reset_query();
+      } else {
+        echo 'No pages are found.';
+      }
+         ?>
     </div>
     <div class="pager__wrap">
       <span class="pager__arrow-left"></span>
