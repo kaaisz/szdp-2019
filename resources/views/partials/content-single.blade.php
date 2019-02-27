@@ -9,6 +9,11 @@
         <p class="article__detail_description">{!! post_custom('responsibility'); !!}</p>
         <h3 class="article__detail">Created with</h3>
         <p class="article__detail_description">{!! post_custom('created_with'); !!}</p>
+        <?php
+          $customfield = get_post_meta($post->ID, 'website_url', true);
+          if ($customfield) { ?>
+            <a class="article__link" href="{!! post_custom('website_url'); !!}">See the website</a>
+        <?php } ?>
       </div>
     </div>
   </header>
@@ -64,8 +69,8 @@
     </div>
     <div class="pager__wrap">
       <span class="pager__arrow-left"></span>
-        <p class="pager left">{!! previous_post('%', '', yes); !!}</p>
-        <p class="pager right">{!! next_post('%', '', yes); !!}</p>
+        <p class="pager left">{!! previous_post_link('%link', '%title', true, ''); !!}</p>
+        <p class="pager right">{!! next_post_link('%link', '%title', true, ''); !!}</p>
       <span class="pager__arrow-right"></span>
     </div>
   </div>
