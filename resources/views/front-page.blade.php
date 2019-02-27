@@ -60,7 +60,7 @@
         global $post;
         $args = (array(
           'posts_per_page' => 6, // 表示件数
-          'category' => '3' // カテゴリIDもしくはスラッグ名
+          'category' => '185' // カテゴリIDもしくはスラッグ名
         ));
         $posts = get_posts($args);
           foreach($posts as $post):
@@ -97,10 +97,10 @@
           Making good flow for users and any clients by logical expressions is her goal for design/development.
         </p>
         <ul class="bio__description_link">
-          <a href="#">
+          <a href="https://www.linkedin.com/in/suzydp/">
             <li class="bio__description_link_list">See the Profile on LinkedIn</li>
           </a>
-          <a href="assets/pdf/resume-2018.pdf">
+          <a href="assets/pdf/resume-kaaisuzuki.pdf">
             <li class="bio__description_link_list">Resume</li>
           </a>
         </ul>
