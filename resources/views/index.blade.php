@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
   <section id="archive" class="archive">
-    <h1 class="section__title">WORKS</h1>
+    <h1 class="section__title">Archive</h1>
 
     <div class="archive__flex-wrap">
 
@@ -27,9 +27,7 @@
               <h3 class="archive__title">{!! the_title(); !!}</h3>
               <div class="archive__description-wrap-child">
                 <p class="archive__tag">{!! the_tags('', ' / ', ''); !!}</p>
-                <p class="archive__description">This is a kind of Web magazine which curated by me, as my 2nd vision.
-                  Pictures are purposely ordered arrenging random to trying
-                  to keep our eyes each piece of pictures without reading.</p>
+                <p class="archive__description">{!! post_custom('description'); !!}</p>
               </div>
             </div>
           </a>
