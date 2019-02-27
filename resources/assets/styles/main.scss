@@ -140,12 +140,12 @@ section {
 
   @include mq() {
     font-size: 4.125rem;
+    text-transform: uppercase;
   }
 }
 
 .header {
   width: 100vw;
-  padding: 15px 0 0 15px;
 
   @include mq() {
     height: 20vh;
@@ -157,7 +157,7 @@ section {
     top: 0;
     width: 15%;
     height: auto;
-    margin: 15px 0 0 0;
+    margin: 15px 0 0 15px;
     padding: 0;
     z-index: 2;
 
@@ -287,6 +287,10 @@ section {
     .language {
       text-align: right;
     }
+  }
+
+  &__link {
+    text-transform: uppercase;
   }
 }
 
@@ -481,12 +485,14 @@ section {
 
   &__description-wrap {
     transition: all 0.3s ease;
-    opacity: 0;
+    margin: -1.5rem 0;
 
     @include mq() {
       width: 45%;
       position: absolute;
       bottom: 1rem;
+      margin: 0;
+      opacity: 0;
 
       &.data1,
       &.data3,
@@ -543,10 +549,11 @@ section {
 
   &__title {
     font-size: $font-150;
-    margin: 0;
+    margin: -1.5rem 0 auto;
 
     @include mq() {
       font-size: 250%;
+      margin: auto;
     }
   }
 
@@ -907,6 +914,34 @@ section {
       padding: 0 8rem;
     }
   }
+
+  &__img-wrap {
+    @include mq () {
+      display: inline-table;
+      width: 100%;
+      padding: 0 8rem;
+    }
+  }
+
+  &__img_md {
+    width: 100%;
+    padding: 0 15px;
+
+    @include mq() {
+      padding: 0;
+      width: 50%;
+    }
+  }
+
+  &__img_sm {
+    width: 100%;
+    padding: 0 15px;
+
+    @include mq() {
+      padding: 0;
+      width: 33.333%;
+    }
+  }
 }
 
 .related-article {
@@ -919,27 +954,38 @@ section {
   &__content-wrap {
     @include mq() {
       display: flex;
+      width: 100%;
     }
   }
 
   @include mq() {
-    &__content:nth-of-type(1) {
-      margin-right: 0.5rem;
+    &__content:nth-of-type(1),
+    &__content:nth-of-type(3) {
+      // margin-right: 0;
+
+      @include mq() {
+        margin: 0;
+      }
     }
 
     &__content:nth-of-type(2) {
-      margin: 0 0.5rem;
-    }
+      margin: 0;
 
-    &__content:nth-of-type(3) {
-      margin-left: 0.5rem;
+      @include mq() {
+        margin: 0 1rem;
+      }
     }
   }
 
   &__img {
-    width: 330.67px;
-    height: 250px;
+    width: 100%;
+    height: 14rem;
     object-fit: cover;
+
+    @include mq() {
+      width: 330.67px;
+      height: 250px;
+    }
   }
 }
 
@@ -1072,6 +1118,7 @@ section {
 
     @include mq() {
       font-size: $font-sm;
+      min-height: 3rem;
     }
   }
 }
