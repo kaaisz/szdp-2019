@@ -105,7 +105,7 @@
           </a>
         </ul>
       </div>
-      <div class="bio__sub right">
+      <div class="bio__sub right wow fadeInUp">
         <img class="bio__img" src="<?= get_template_directory_uri(); ?>/assets/images/profile.jpg" />
         <p class="bio__caption">
           Photo by <a class="bio__caption_link" href="http://yoshiro-hayakawa.com/" target="_blank">Yoshiro

@@ -1,6 +1,25 @@
+import { WOW } from 'wowjs';
+
 export default {
   init() {
     // JavaScript to be fired on all pages
+
+    //-//-//-//-//-//-//-//-//-//-//-//-//-//
+    //-//-------------WOW JS------------//-//
+    //-//-//-//-//-//-//-//-//-//-//-//-//-//
+
+    const wow = new WOW(
+      {
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: true,
+        live: true,
+      }
+    );
+
+    wow.init();
+
     (function() {
 
       'use strict';
