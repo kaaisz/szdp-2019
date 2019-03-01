@@ -8,16 +8,7 @@ export default {
     //-//-------------WOW JS------------//-//
     //-//-//-//-//-//-//-//-//-//-//-//-//-//
 
-    const wow = new WOW(
-      {
-        boxClass: 'wow',
-        animateClass: 'animated',
-        offset: 0,
-        mobile: true,
-        live: true,
-      }
-    );
-
+    const wow = new WOW()
     wow.init();
 
     (function() {

@@ -65,7 +65,7 @@
         $posts = get_posts($args);
           foreach($posts as $post):
             setup_postdata($post); ?>
-      <div class="works__img-wrap">
+      <div class="works__img-wrap wow fadeInUp">
         <a href="<?php the_permalink(); ?>">
           <?php the_post_thumbnail('large', array('class' => 'works__img'));?>
           <div class="works__description-wrap">
@@ -105,7 +105,7 @@
           </a>
         </ul>
       </div>
-      <div class="bio__sub right wow fadeInUp">
+      <div class="bio__sub right wow fadeIn">
         <img class="bio__img" src="<?= get_template_directory_uri(); ?>/assets/images/profile.jpg" />
         <p class="bio__caption">
           Photo by <a class="bio__caption_link" href="http://yoshiro-hayakawa.com/" target="_blank">Yoshiro
