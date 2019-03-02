@@ -8,34 +8,22 @@
     <h3 class="top__description">D is for Design and Development.<br>P is for Plan and Programming.</h3>
     <ul class="social">
       <a href="https://www.facebook.com/suzydp" target="_blank">
-        <li><i class="fab fa-facebook-f"></i>
-          <!--facebook-->
-        </li>
+        <li><i class="fab fa-facebook-f"></i></li><!--facebook-->
       </a>
       <a href="https://www.linkedin.com/in/kaaisuzuki/" target="_blank">
-        <li><i class="fab fa-linkedin" target="_blank"></i>
-          <!--linkedin-->
-        </li>
+        <li><i class="fab fa-linkedin" target="_blank"></i></li><!--linkedin-->
       </a>
       <a href="https://www.instagram.com/suzydp/" target="_blank">
-        <li><i class="fab fa-instagram"></i>
-          <!--instagram-->
-        </li>
+        <li><i class="fab fa-instagram"></i></li><!--instagram-->
       </a>
       <a href="https://github.com/suzydp/" target="_blank">
-        <li><i class="fab fa-github"></i>
-          <!--github-->
-        </li>
+        <li><i class="fab fa-github"></i></li><!--github-->
       </a>
       <a href="https://dribbble.com/suzydp" target="_blank">
-        <li><i class="fab fa-dribbble"></i>
-          <!--dribbble-->
-        </li>
+        <li><i class="fab fa-dribbble"></i></li><!--dribbble-->
       </a>
       <a href="http://dp00.tumblr.com/" target="_blank">
-        <li><i class="fab fa-tumblr"></i>
-          <!--tumblr-->
-        </li>
+        <li><i class="fab fa-tumblr"></i></li><!--tumblr-->
       </a>
     </ul>
   </div>
@@ -44,7 +32,7 @@
   </div>
 </section>
   <div class="scroll-to-main">
-    <a class="scroll-arrow to-works" href="#works">↓Works</a>
+    <a id="scroll__to-works" class="scroll-arrow to-works" href="#works">↓Works</a>
   </div>
 
   <section id="works" class="works">

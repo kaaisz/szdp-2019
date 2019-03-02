@@ -6,6 +6,12 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "ajax": [
+      "./scripts/partials/ajax.js"
+    ],
+    "script": [
+      "./scripts/script.js"
     ]
   },
   "publicPath": "/wp-content/themes/szdp-pf-2019",
