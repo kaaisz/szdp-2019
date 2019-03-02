@@ -44,7 +44,7 @@
   </div>
 </section>
   <div class="scroll-to-main">
-    <a onclick="topFunction()" class="scroll-arrow to-works" href="#works">↓Works</a>
+    <a class="scroll-arrow to-works" href="#works">↓Works</a>
   </div>
 
   <section id="works" class="works">
@@ -85,33 +85,24 @@
 
   <!-- bio/skills -->
   <section id="bio" class="bio">
-    <h2 class="section__title">BIOGRAPHY</h2>
-    <div class="bio__wrap">
-      <div class="bio__sub left">
-        <h3 class="bio__name">Kaai Suzuki,<br>UI/UX Designer, Front-end developer<br>From Tokyo to
-          Vancouver and everywhere.</h3>
-        <p class="bio__description">Over 3 years experienced Web designer/Front-end developer focusing on
-          branding, based on the experiences of fashion design & graphic design.
-          She is always into improving herself by hunting up for new design/framework/library and any other
-          things.<br>
-          Making good flow for users and any clients by logical expressions is her goal for design/development.
-        </p>
-        <ul class="bio__description_link">
-          <a href="https://www.linkedin.com/in/suzydp/">
-            <li class="bio__description_link_list">See the Profile on LinkedIn</li>
-          </a>
-          <a href="assets/pdf/resume-kaaisuzuki.pdf">
-            <li class="bio__description_link_list">Resume</li>
-          </a>
-        </ul>
-      </div>
-      <div class="bio__sub right wow fadeIn">
-        <img class="bio__img" src="<?= get_template_directory_uri(); ?>/assets/images/profile.jpg" />
-        <p class="bio__caption">
-          Photo by <a class="bio__caption_link" href="http://yoshiro-hayakawa.com/" target="_blank">Yoshiro
-            Hayakawa</a>
-        </p>
-      </div>
+    <h2 class="section__title left">BIOGRAPHY</h2>
+    <div class="bio__sub left">
+      <h3 class="bio__name">Kaai Suzuki,<br>UI/UX Designer, Front-end developer<br>From Tokyo to
+        Vancouver and everywhere.</h3>
+      <p class="bio__description">Over 3 years experienced Web designer/Front-end developer focusing on
+        branding, based on the experiences of fashion design & graphic design.
+        She is always into improving herself by hunting up for new design/framework/library and any other
+        things.<br>
+        Making good flow for users and any clients by logical expressions is her goal for design/development.
+      </p>
+      <ul class="bio__description_link">
+        <a href="https://www.linkedin.com/in/suzydp/">
+          <li class="bio__description_link_list">See the Profile on LinkedIn</li>
+        </a>
+        <a href="assets/pdf/resume-kaaisuzuki.pdf">
+          <li class="bio__description_link_list">Resume</li>
+        </a>
+      </ul>
     </div>
     <div class="skills" id="skills">
       <div class="skills__container">
@@ -148,6 +139,13 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="bio__sub right wow fadeIn sticky" style="top: 8rem">
+      <img class="bio__img" src="<?= get_template_directory_uri(); ?>/assets/images/profile.jpg" />
+      <p class="bio__caption">
+        Photo by <a class="bio__caption_link" href="http://yoshiro-hayakawa.com/" target="_blank">Yoshiro
+          Hayakawa</a>
+      </p>
     </div>
   </section>
 

@@ -693,6 +693,8 @@ section {
 }
 
 .bio {
+  position: relative;
+
   &__wrap {
     display: flex;
     flex-direction: column-reverse;
@@ -701,6 +703,19 @@ section {
     @include mq() {
       flex-direction: row;
     }
+  }
+
+  &__sub.left {
+    padding: 0 1rem 10rem 0;
+    margin-bottom: 10rem;
+  }
+
+  &__sub.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8rem 8rem 8rem 1rem;
+    margin: 0;
   }
 
   &__img {
