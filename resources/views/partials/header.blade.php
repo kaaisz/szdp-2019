@@ -21,7 +21,7 @@
           <a class="nav__link" href="grabbbb.html"><li>Grabbbb</li></a>
           <a class="nav__link" href="shiori.html"><li>Shiori</li></a>
           <a class="nav__link" href="tnr-acid.html"><li>Tenori Acid</li></a> -->
-          <a class="nav__link" href="category/work"><li>Archive</li></a>
+          <a class="nav__link" href="{{ home_url('/') }}category/work"><li>Archive</li></a>
         </ul>
       </li>
       <a class="nav__link" href="#bio"><li>Biography</li></a>
