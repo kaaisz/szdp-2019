@@ -47,8 +47,8 @@
       <?php
         global $post;
         $args = (array(
-          'posts_per_page' => 6, // 表示件数
-          'category' => '185' // カテゴリIDもしくはスラッグ名
+          'posts_per_page' => 6, // numbers of pages appearing
+          'category' => '185' // Cateogory ID (category_name is also available with slag)
         ));
         $posts = get_posts($args);
           foreach($posts as $post):
@@ -75,13 +75,12 @@
   <section id="bio" class="bio">
     <h2 class="section__title left">BIOGRAPHY</h2>
     <div class="bio__sub left">
-      <h3 class="bio__name">Kaai Suzuki,<br>UI/UX Designer, Front-end developer<br>From Tokyo to
-        Vancouver and everywhere.</h3>
-      <p class="bio__description">Over 3 years experienced Web designer/Front-end developer focusing on
-        branding, based on the experiences of fashion design & graphic design.
-        She is always into improving herself by hunting up for new design/framework/library and any other
-        things.<br>
-        Making good flow for users and any clients by logical expressions is her goal for design/development.
+      <h3 class="bio__name">Kaai Suzuki,<br>UI/UX Designer, Front-end developer From Tokyo.</h3>
+      <p class="bio__description">Web designer/front-end developer with a strong focus on branding, 
+      based on experience in fashion design and graphic design. 
+      Emphasizes creating a smooth flow for users and clients logically when designing and developing websites.
+      Over three years of work experience, and always striving to improve by learning about 
+      new designs, frameworks, libraries, and more. 
       </p>
       <ul class="bio__description_link">
         <a href="https://www.linkedin.com/in/suzydp/">
@@ -108,9 +107,9 @@
           <div class="skills__content">
             <h4 class="skills__head">Fluent in</h4>
             <ul class="skills__list">
-              <li>Adobe Illustrator, Photoshop, indesign, XD and Sketch</li>
+              <li>Adobe Illustrator, Photoshop, indesign, XD, Sketch and Figma</li>
               <li>Developing with Bootstrap, Material Design UI</li>
-              <li>Typography / ColorSheme / UX strategy</li>
+              <li>Typography / ColorScheme / UX strategy</li>
             </ul>
           </div>
           <div class="skills__content">
@@ -120,7 +119,7 @@
                 <p>Illustrator / Photoshop / Sketch / Figma / Indesign / XD / Invision Studio</p>
               <li>Development</li>
                 <p>HTML5 / CSS3 / Sass / Git / PHP / Wordpress / React.js / Gulp / Webpack / Redux / Express(For MERN stack) / Node.js /
-                MySQL / Ajax / BEM-SMACSS-OOCSS / SVG Animation / jQuery / GSAP / Firebase </p>
+                MySQL / MongoDB / Ajax / BEM-SMACSS-OOCSS / SVG Animation / jQuery / GSAP / Firebase </p>
               <li>Other</li>
                 <p>Google Apps(Docs, sheets, slides and forms including to use Google Apps Script) / Google Analytics / Google Optimize / SEO solution</p>
             </ul>
