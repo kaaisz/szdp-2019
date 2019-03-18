@@ -4,7 +4,7 @@
   <!-- @include('partials.page-header') -->
 <section id="top" class="top">
   <div class="top__title-wrap">
-    <h2 class="top__title">SZDP/Kaai Suzuki</h2>
+    <h2 class="top__title">Kaai Suzuki/SZDP</h2>
     <h3 class="top__description">D is for Design and Development.<br>P is for Plan and Programming.</h3>
     <ul class="social">
       <a href="https://www.facebook.com/suzydp" target="_blank">
@@ -74,20 +74,29 @@
   <!-- bio/skills -->
   <section id="bio" class="bio">
     <h2 class="section__title left">BIOGRAPHY</h2>
-    <div class="bio__sub left">
-      <h3 class="bio__name">Kaai Suzuki,<br>UI/UX Designer and Front-end developer</h3>
-      <p class="bio__description">Web designer/front-end developer with a strong focus on branding, based on experience in fashion design and graphic design. 
-        Emphasizes creating a smooth flow for users and clients logically when designing and developing websites.
-        Over three years of work experience, and always striving to improve by learning about new designs, frameworks, libraries, and more. 
-      </p>
-      <ul class="bio__description_link">
-        <a href="https://www.linkedin.com/in/suzydp/">
-          <li class="bio__description_link_list">See the Profile on LinkedIn</li>
-        </a>
-        <a href="assets/pdf/resume-kaaisuzuki.pdf">
-          <li class="bio__description_link_list">Resume</li>
-        </a>
-      </ul>
+    <div class="bio__sub_wrap">
+      <div class="bio__sub left">
+        <h3 class="bio__name">Kaai Suzuki,<br>UI/UX Designer and Front-end developer</h3>
+        <p class="bio__description">Web designer/front-end developer with a strong focus on branding, based on experience in fashion design and graphic design. 
+          Emphasizes creating a smooth flow for users and clients logically when designing and developing websites.
+          Over three years of work experience, and always striving to improve by learning about new designs, frameworks, libraries, and more. 
+        </p>
+        <ul class="bio__description_link">
+          <a href="https://www.linkedin.com/in/suzydp/">
+            <li class="bio__description_link_list">See the Profile on LinkedIn</li>
+          </a>
+          <a href="assets/pdf/resume-kaaisuzuki.pdf">
+            <li class="bio__description_link_list">Resume</li>
+          </a>
+        </ul>
+      </div>
+      <div class="bio__sub right wow fadeIn">
+        <img class="bio__img" src="<?= get_template_directory_uri(); ?>/assets/images/profile.jpg" />
+        <p class="bio__caption">
+          Photo by <a class="bio__caption_link" href="http://yoshiro-hayakawa.com/" target="_blank">Yoshiro
+            Hayakawa</a>
+        </p>
+      </div>
     </div>
     <div class="skills" id="skills">
       <div class="skills__container">
@@ -124,13 +133,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="bio__sub right wow fadeIn">
-      <img class="bio__img" src="<?= get_template_directory_uri(); ?>/assets/images/profile.jpg" />
-      <p class="bio__caption">
-        Photo by <a class="bio__caption_link" href="http://yoshiro-hayakawa.com/" target="_blank">Yoshiro
-          Hayakawa</a>
-      </p>
     </div>
   </section>
 

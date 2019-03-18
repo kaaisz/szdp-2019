@@ -28,7 +28,7 @@
               <div class="archive__description-wrap-child">
               <?php if (!$customfield) { ?>
                 <p class="archive__tag">{!! the_tags('', ' / ', ''); !!}</p>
-                <p class="archive__description">{!! post_custom('description'); !!}</p>
+                <!-- <p class="archive__description">{!! post_custom('description'); !!}</p> -->
               <?php } ?>
               </div>
             </div>
