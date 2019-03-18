@@ -93,7 +93,6 @@ body {
 
 h2 {
   font-size: 1.75rem;
-  text-transform: uppercase;
 
   @include mq() {
     font-size: $section-title;
@@ -138,10 +137,10 @@ section {
   margin: 0 0 2rem;
   font-size: $font-xl;
   letter-spacing: 5px;
+  text-transform: uppercase;
 
   @include mq() {
     font-size: $section-title;
-    text-transform: uppercase;
     line-height: 1;
     margin-bottom: 4rem;
   }
@@ -605,7 +604,7 @@ section {
 
     &::before,
     &::after {
-      // Set border to invisible, 
+      // Set border to invisible
       // so we don't see border on a 0x0 element before the transition starts
       border: 2px solid transparent;
       width: 0;
@@ -836,7 +835,7 @@ section {
   }
 
   &__title-wrap {
-    margin: 0;
+    margin: 2.5rem 0 0;
     padding: 0 15px;
     display: flex;
     flex-direction: column;
@@ -898,7 +897,7 @@ section {
 
   &__section-title {
     font-size: $font-125;
-    font-family: $font-stack-jp;
+    font-family: $font-stack;
     margin: 0 auto calc(2.5rem - 15px);
 
     @include mq() {
@@ -971,6 +970,10 @@ section {
 
   @include mq() {
     padding: 0 8rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
   }
 
   &__content-wrap {
@@ -1085,7 +1088,7 @@ section {
 .archive,
 .search {
   width: 100%;
-  margin: 40px 0 10rem;
+  margin: 40px 0 0;
   padding-top: 0;
 
   @include mq() {
