@@ -1,4 +1,3 @@
-'use strict';
 //-//-//-//-//-//-//-//-//-//-//-//-//-//
 //-//-----hamburger menu toggle-----//-//
 //-//-//-//-//-//-//-//-//-//-//-//-//-//
@@ -124,4 +123,23 @@ document.querySelector('#scroll__to-top').addEventListener('click', () => {
     document.querySelector('#header'), 450, 'easeOutQuad', () => //where to, how fast the speedwidth, what the class do u wanna link up with
     console.log(`Just finished scrolling to ${window.pageYOffset}px`)
   );
+});
+
+
+import ScrollMagic from 'scrollmagic';
+
+$(document).ready(function() {
+  // init ScrollMagic
+  var controller = new ScrollMagic.controller();
+  console.log('Hello from scrollmagic');
+
+  // multiple pin in a single element
+  new ScrollMagic.scene({
+    // define options by creating projects
+    triggerElement: '.bio__sub.right',
+    triggerHook: 0,
+    duration: '70%',
+  })
+  .setPin('.bio__sub.right', {pushFollowers: false})
+  .addTo(controller);
 });

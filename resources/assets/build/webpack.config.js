@@ -1,5 +1,5 @@
 'use strict'; // eslint-disable-line
-
+const path = require('path')
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const CleanPlugin = require('clean-webpack-plugin');
@@ -125,6 +125,9 @@ let webpackConfig = {
       config.paths.assets,
       'node_modules',
     ],
+    alias: {
+      'ScrollMagic': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
+    },
     enforceExtension: false,
   },
   resolveLoader: {
