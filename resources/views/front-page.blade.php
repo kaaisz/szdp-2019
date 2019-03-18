@@ -47,8 +47,8 @@
       <?php
         global $post;
         $args = (array(
-          'posts_per_page' => 6, // 表示件数
-          'category' => '185' // カテゴリIDもしくはスラッグ名
+          'posts_per_page' => 6, // numbers of pages appearing
+          'category' => '185' // Cateogory ID (category_name is also available with slag)
         ));
         $posts = get_posts($args);
           foreach($posts as $post):
@@ -107,7 +107,7 @@
             <ul class="skills__list">
               <li>Adobe Illustrator, Photoshop, indesign, XD, Sketch and Figma</li>
               <li>Developing with Bootstrap, Material Design UI</li>
-              <li>Typography / ColorSheme / UX strategy</li>
+              <li>Typography / ColorScheme / UX strategy</li>
             </ul>
           </div>
           <div class="skills__content">
@@ -117,7 +117,7 @@
                 <p>Illustrator / Photoshop / Sketch / Figma / Indesign / XD / Invision Studio</p>
               <li>Development</li>
                 <p>HTML5 / CSS3 / Sass / Git / PHP / Wordpress / React.js / Gulp / Webpack / Redux / Express(For MERN stack) / Node.js /
-                MySQL / Ajax / BEM-SMACSS-OOCSS / SVG Animation / jQuery / GSAP / Firebase </p>
+                MySQL / MongoDB / Ajax / BEM-SMACSS-OOCSS / SVG Animation / jQuery / GSAP / Firebase </p>
               <li>Other</li>
                 <p>Google Apps(Docs, sheets, slides and forms including to use Google Apps Script) / Google Analytics / Google Optimize / SEO solution</p>
             </ul>
