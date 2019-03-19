@@ -12,6 +12,9 @@
     ],
     "script": [
       "./scripts/script.js"
+    ],
+    "scroll-animation": [
+      "./scripts/scroll-animation.js"
     ]
   },
   "publicPath": "/wp-content/themes/szdp-pf-2019",

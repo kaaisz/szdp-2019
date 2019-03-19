@@ -1,6 +1,6 @@
 import { WOW } from 'wowjs';
 import Sticky from 'sticky-js';
-import '../partials/ajax.js'
+import '../partials/ajax.js';
 
 export default {
   init() {
@@ -18,6 +18,7 @@ export default {
     //-//-//-//-//-//-//-//-//-//-//-//-//-//
 
     new Sticky('.sticky');
+
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
