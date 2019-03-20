@@ -109,13 +109,13 @@ function scrollIt(destination, duration = 200, easing = 'linear', callback){
 
 
 //---Scrolling function---//
-//scroll to work
-// document.querySelector('#scroll__to-works').addEventListener('click', () => {
-//   scrollIt(//invoke scrollIt
-//     document.querySelector('#works'), 450, 'easeOutQuad', () => //where to, how fast the speedwidth, what the class do u wanna link up with
-//     console.log(`Just finished scrolling to ${window.pageYOffset}px`)
-//   );
-// });
+// scroll to work
+document.querySelector('#scroll__to-works').addEventListener('click', () => {
+  scrollIt(//invoke scrollIt
+    document.querySelector('#works'), 450, 'easeOutQuad', () => //where to, how fast the speedwidth, what the class do u wanna link up with
+    console.log(`Just finished scrolling to ${window.pageYOffset}px`)
+  );
+});
 
 //scroll to top
 document.querySelector('#scroll__to-top').addEventListener('click', () => {
