@@ -701,16 +701,15 @@ section {
 
     .section__title_bio {
       position: absolute;
-      top: 0;
+      top: 6rem;
     }
   }
 
   &__img_wrap {
     @include mq() {
-      position: sticky;
-      top: 6rem;
       width: 50%;
-      margin-left: auto;
+      margin: -6rem 0 6rem auto;
+      padding-top: 6rem;
     }
   }
 
@@ -723,7 +722,7 @@ section {
       position: absolute;
       top: 0;
       width: calc(50% - 3rem);
-      margin: 8rem auto 8rem 0;
+      margin: calc(6rem + 8rem) auto 8rem 0;
     }
   }
 
@@ -738,7 +737,7 @@ section {
   }
 
   &__caption {
-    margin: 0.5rem 0;
+    margin: 0;
   }
 }
 

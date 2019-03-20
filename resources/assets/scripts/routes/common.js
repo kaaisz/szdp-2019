@@ -1,5 +1,4 @@
 import { WOW } from 'wowjs';
-import Sticky from 'sticky-js';
 import '../partials/ajax.js';
 
 export default {
@@ -12,12 +11,6 @@ export default {
 
     const wow = new WOW()
     wow.init();
-
-    //-//-//-//-//-//-//-//-//-//-//-//-//-//
-    //-//------------Sticky JS----------//-//
-    //-//-//-//-//-//-//-//-//-//-//-//-//-//
-
-    new Sticky('.sticky');
 
   },
   finalize() {

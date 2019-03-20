@@ -124,26 +124,3 @@ document.querySelector('#scroll__to-top').addEventListener('click', () => {
     console.log(`Just finished scrolling to ${window.pageYOffset}px`)
   );
 });
-
-
-//-//-//-//-//-//-//-//-//-//-//-//-//-//
-//-//--------sticky elements--------//-//
-//-//-//-//-//-//-//-//-//-//-//-//-//-//
-
-// let trigger = document.querySelector('#bio');
-// let stickyStart = trigger.offsetTop;
-// let stickyEnd = stickyStart + (trigger.offsetHeight - 100);
-// let stickyElem = document.querySelector('.bio__sub.right');
-// console.log('trigger start', stickyStart);
-// console.log('trigger end', stickyEnd);
-// function stickyImg() {
-//   if (window.scrollY >= stickyStart && window.scrollY <= stickyEnd) {
-//     console.log('stickying');
-//     stickyElem.classList.add('sticky');
-//   } else {
-//     console.log('sticky is not executed');
-//     stickyElem.classList.remove('sticky');
-//   }
-// }
-
-// window.addEventListener('scroll', stickyImg);

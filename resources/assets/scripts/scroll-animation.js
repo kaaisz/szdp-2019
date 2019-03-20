@@ -9,22 +9,26 @@ import 'debug.addIndicators';
     //-//-//-//-//-//-//-//-//-//-//-//-//-//
     // init scrollmagic
     const controller = new ScrollMagic.Controller();
+    const trigger = document.querySelector('.bio__img_wrap');
+    const stickyStart = trigger.offsetTop;
+    const stickyEnd = stickyStart + (document.querySelector('#bio').offsetHeight - 680);
     console.log(controller);
+    
 
     // // multiple pin in a single element
     new ScrollMagic.Scene({
       // define options by creating projects
-      triggerElement: '.bio__sub.right',
-    //   triggerHook: 0,
-    //   duration: '70%',
+      triggerElement: '.bio__img_wrap',
+      triggerHook: 0,
+      duration: stickyEnd,
     })
-    // .setPin('.bio__sub.right', {pushFollowers: false})
-    .addIndicators({
-      name: 'fade scene',
-      colorTrigger: 'black',
-      indent: '200',
-      colorStart: '#75C695',
-    })
+    .setPin('.bio__img_wrap', {pushFollowers: false})
+    // .addIndicators({
+    //   name: 'fade scene',
+    //   colorTrigger: 'black',
+    //   indent: '0',
+    //   colorStart: '#75C695',
+    // })
     .addTo(controller);
   })
 })(jQuery);
