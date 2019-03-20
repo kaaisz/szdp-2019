@@ -729,6 +729,13 @@ section {
       right: 0;
       padding: 8rem 8rem 8rem 1rem;
       margin: 0;
+      opacity: 0;
+    }
+
+    &.sticky {
+      position: fixed;
+      opacity: 1;
+      transition: all 1s ease-out;
     }
   }
 
@@ -738,6 +745,10 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include mq() {
+      display: block;
+    }
   }
 
   &__name {
