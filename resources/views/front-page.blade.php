@@ -37,13 +37,14 @@
 
   <section id="works" class="works">
     <h2 class="section__title">Case Study</h2>
-    @if (!have_posts())
-      <div class="alert alert-warning">
-        {{ __('Sorry, no results were found.', 'sage') }}
-      </div>
-      {!! get_search_form(false) !!}
-    @endif
-    
+    <div class="works__wrap">
+      @if (!have_posts())
+        <div class="alert alert-warning">
+          {{ __('Sorry, no results were found.', 'sage') }}
+        </div>
+        {!! get_search_form(false) !!}
+      @endif
+      
       <?php
         global $post;
         $args = (array(
@@ -53,21 +54,21 @@
         $posts = get_posts($args);
           foreach($posts as $post):
             setup_postdata($post); ?>
-      <div class="works__img-wrap wow fadeInUp">
-        <a href="<?php the_permalink(); ?>">
-          <?php the_post_thumbnail('large', array('class' => 'works__img'));?>
-          <div class="works__description-wrap">
-            <?php the_title('<h3 class="works__title">', '</h3>'); ?>
-            <p class="works__tag"><?php the_tags('', ' / ', '');?></p>
-          </div>
-        </a>
-      </div>
+        <div class="works__img-wrap wow fadeInUp">
+          <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail('large', array('class' => 'works__img'));?>
+            <div class="works__description-wrap">
+              <?php the_title('<h3 class="works__title">', '</h3>'); ?>
+              <p class="works__tag"><?php the_tags('', ' / ', '');?></p>
+            </div>
+          </a>
+        </div>
       <?php 
         endforeach;
         wp_reset_postdata(); 
       ?>
-      
-      <a class="button draw meet" href="<?php echo(get_category_link(3))?>">View More</a>
+    </div>
+    <a class="button draw meet" href="<?php echo(get_category_link(3))?>">View More</a>
 
   </section>
 

@@ -136,7 +136,7 @@ section {
 .section__title,
 .section__title_bio,
 .section__title_skills {
-  margin: 0 0 2rem;
+  margin: 0 0 4rem;
   font-size: $font-xl;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -272,7 +272,7 @@ section {
     margin: 0;
     padding: 103px 20px;
     text-align: left;
-    font-size: $font-175;
+    font-size: $font-xl;
     z-index: -1;
 
     @include mq() {
@@ -294,6 +294,10 @@ section {
 
   &__link {
     text-transform: uppercase;
+
+    li {
+      line-height: 2;
+    }
   }
 }
 
@@ -455,8 +459,17 @@ section {
 }
 
 .works {
+  &__wrap {
+    margin: -5rem 0 0;
+
+    @include mq() {
+      margin: 0;
+    }
+  }
+
   &__img-wrap {
     position: relative;
+    display: inline-block;
 
     @include mq() {
       &:nth-of-type(odd) {
@@ -742,7 +755,7 @@ section {
 }
 
 .skills {
-  padding: 1.5rem 0;
+  padding: 5rem 0;
 
   @include mq() {
     width: calc(50% - 3rem);
@@ -783,7 +796,7 @@ section {
   }
 
   &__title {
-    margin: 4rem 0 0;
+    margin: 4rem 0;
     padding: 0;
 
     @include mq() {
