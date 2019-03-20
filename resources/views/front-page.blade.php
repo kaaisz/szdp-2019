@@ -73,9 +73,16 @@
 
   <!-- bio/skills -->
   <section id="bio" class="bio">
-    <h2 class="section__title left">BIOGRAPHY</h2>
-    <div class="bio__sub_wrap">
-      <div class="bio__sub left">
+    <div class="section__sticky-wrap">
+      <h2 class="section__title_bio">BIOGRAPHY</h2>
+      <div class="bio__img_wrap">
+        <img class="bio__img wow fadeIn" src="<?= get_template_directory_uri(); ?>/assets/images/profile.jpg" />
+        <p class="bio__caption">
+          Photo by <a class="bio__caption_link" href="http://yoshiro-hayakawa.com/" target="_blank">Yoshiro
+            Hayakawa</a>
+        </p>
+      </div>
+      <div class="bio__text">
         <h3 class="bio__name">Kaai Suzuki,<br>UI/UX Designer and Front-end developer</h3>
         <p class="bio__description">Web designer/front-end developer with a strong focus on branding, based on experience in fashion design and graphic design. 
           Emphasizes creating a smooth flow for users and clients logically when designing and developing websites.
@@ -90,18 +97,9 @@
           </a>
         </ul>
       </div>
-      <div class="bio__sub right wow fadeIn">
-        <img class="bio__img" src="<?= get_template_directory_uri(); ?>/assets/images/profile.jpg" />
-        <p class="bio__caption">
-          Photo by <a class="bio__caption_link" href="http://yoshiro-hayakawa.com/" target="_blank">Yoshiro
-            Hayakawa</a>
-        </p>
-      </div>
-    </div>
-    <div class="skills" id="skills">
-      <div class="skills__container">
-        <div class="skills__content left">
-          <h2 class="section__title">SKILLS</h2>
+      <div class="skills" id="skills">
+        <div class="skills__container">
+          <h2 class="section__title_skills">SKILLS</h2>
           <div class="skills__description-wrap">
             <h4 class="skills__head">Specialities</h4>
             <ul class="skills__list">
