@@ -136,7 +136,7 @@ section {
 .section__title,
 .section__title_bio,
 .section__title_skills {
-  margin: 0 0 4rem;
+  margin: 4rem 0;
   font-size: $font-xl;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -144,7 +144,7 @@ section {
   @include mq() {
     font-size: $section-title;
     line-height: 1;
-    margin-bottom: 4rem;
+    margin: 0 0 4rem;
   }
 }
 
@@ -814,7 +814,7 @@ section {
 
   &__mailto {
     display: inline-block;
-    margin: 1rem 0;
+    margin: 0 0 1rem;
     font-size: 1.65rem;
   }
 }
@@ -990,6 +990,7 @@ section {
     @include mq() {
       display: flex;
       width: 100%;
+      margin-bottom: 4rem;
     }
   }
 
@@ -1038,7 +1039,7 @@ section {
     padding: 3rem 0 0;
 
     @include mq() {
-      padding: 0;
+      padding: 0 0 8rem;
     }
   }
 
@@ -1120,7 +1121,7 @@ section {
 
     @include mq() {
       width: 50%;
-      min-height: 560px;
+      min-height: 540px;
       float: left;
 
       &:nth-of-type(odd) {
