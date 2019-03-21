@@ -4,8 +4,8 @@
   <!-- @include('partials.page-header') -->
 <section id="top" class="top">
   <div class="top__title-wrap">
-    <h2 class="top__title">Kaai Suzuki/SZDP</h2>
-    <h3 class="top__description">D is for Design and Development.<br>P is for Plan and Programming.</h3>
+    <h2 class="top__title">Kaai Suzuki/Suzy</h2>
+    <h3 class="top__description">UI/UX designer, Front-end developer<br />Based in Vancouver, Canada</h3>
     <ul class="social">
       <a href="https://www.facebook.com/suzydp" target="_blank">
         <li><i class="fab fa-facebook-f"></i></li><!--facebook-->
@@ -32,7 +32,7 @@
   </div>
 </section>
   <div class="scroll-to-main">
-    <a id="scroll__to-works" class="scroll-arrow to-works" href="#works">↓Works</a>
+    <a id="scroll__to-works" class="scroll-arrow to-works" href="#works">↓Case Study</a>
   </div>
 
   <section id="works" class="works">
@@ -85,7 +85,7 @@
       </div>
       <div class="bio__text">
         <h3 class="bio__name">Kaai Suzuki,<br>UI/UX Designer and Front-end developer</h3>
-        <p class="bio__description">Web designer/front-end developer with a strong focus on branding, based on experience in fashion design and graphic design. 
+        <p class="bio__description">She is stronglly focusing on branding, based on experience in fashion design and graphic design. 
           Emphasizes creating a smooth flow for users and clients logically when designing and developing websites.
           Over three years of work experience, and always striving to improve by learning about new designs, frameworks, libraries, and more. 
         </p>

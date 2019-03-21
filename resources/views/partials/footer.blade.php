@@ -7,7 +7,7 @@
         </div>
         <div class="contact__details-wrap">
           <p class="contact__mailto_sub">Contact to <br>
-          <a class="contact__mailto animate-hvr-right" href="mailto:suzydp@me.com">suzydp@me.com</a></p>
+          <a class="contact__mailto animate-hvr-right" href="mailto:info@kaaisuzuki.com">info@kaaisuzuki.com</a></p>
           <p class="contact__description_social">or social links</p>
           <ul class="social">
             <a href="https://www.facebook.com/suzydp" target="_blank"><li><i class="fab fa-facebook-f"></i><!--facebook--></li></a>
