@@ -33,7 +33,7 @@
   </div>
 
   <div class="related-article">
-    <h2 class="related-article__title">See other Projects</h2>
+    <h2 class="related-article__title">Other Projects</h2>
     <div class="related-article__content-wrap">
     <?php
       // if some of categories are set, get either one by random
