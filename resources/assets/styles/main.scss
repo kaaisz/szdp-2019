@@ -774,8 +774,8 @@ section {
 
   @include mq() {
     width: calc(50% - 3rem);
-    margin: 8rem auto 8rem 0;
-    padding: 0;
+    margin: 0 auto 8rem 0;
+    padding: 8rem 0 0 0;
   }
 
   &__head {

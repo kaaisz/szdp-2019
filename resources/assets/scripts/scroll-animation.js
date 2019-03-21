@@ -12,7 +12,7 @@ import 'debug.addIndicators';
       const controller = new ScrollMagic.Controller();
       const trigger = document.querySelector('.bio__img_wrap');
       const stickyStart = trigger.offsetTop;
-      const stickyEnd = stickyStart + (document.querySelector('#bio').offsetHeight - 680);
+      const stickyEnd = stickyStart + (document.querySelector('#bio').offsetHeight - 670);
       console.log(controller);
       
   
