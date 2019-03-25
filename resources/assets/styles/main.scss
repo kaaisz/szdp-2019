@@ -94,7 +94,7 @@ body {
 h2 {
   font-size: 1.75rem;
 
-  @include mq() {
+  @include mq(lg) {
     font-size: $section-title;
   }
 }
@@ -121,14 +121,14 @@ section {
   min-height: 100vh;
   padding: 15px;
 
-  @include mq() {
+  @include mq(lg) {
     padding: 2.125rem 8rem;
   }
 }
 
 .left,
 .right {
-  @include mq() {
+  @include mq(lg) {
     width: 50%;
   }
 }
@@ -141,7 +141,7 @@ section {
   letter-spacing: 5px;
   text-transform: uppercase;
 
-  @include mq() {
+  @include mq(lg) {
     font-size: $section-title;
     line-height: 1;
     margin: 0 0 4rem;
@@ -152,7 +152,7 @@ section {
   width: 100vw;
   height: 80px;
 
-  @include mq() {
+  @include mq(lg) {
     height: 8rem;
   }
 
@@ -165,7 +165,7 @@ section {
     padding: 0;
     z-index: 2;
 
-    @include mq() {
+    @include mq(lg) {
       width: 64px;
       height: auto;
       margin: 2.125rem 0 0 2.125rem;
@@ -226,7 +226,7 @@ section {
     z-index: 2;
     cursor: pointer;
 
-    @include mq() {
+    @include mq(lg) {
       margin: 52px 3rem 0 0;
     }
 
@@ -291,7 +291,7 @@ section {
     font-size: $font-xl;
     z-index: -1;
 
-    @include mq() {
+    @include mq(lg) {
       justify-content: center;
       padding: 8rem;
       font-size: 48px;
@@ -326,7 +326,7 @@ section {
   justify-content: center;
   padding: 0 15px 15px;
 
-  @include mq() {
+  @include mq(lg) {
     height: 100vh;
     margin: -8rem 0;
     flex-direction: row;
@@ -341,7 +341,7 @@ section {
     flex-direction: column;
     align-items: flex-start;
 
-    @include mq() {
+    @include mq(lg) {
       width: calc(100% - 25rem);
     }
   }
@@ -351,7 +351,7 @@ section {
     font-size: $font-150;
     letter-spacing: 4px;
 
-    @include mq() {
+    @include mq(lg) {
       margin: 0;
       font-size: $section-title;
     }
@@ -363,7 +363,7 @@ section {
     letter-spacing: 0.5px;
     text-align: center;
 
-    @include mq() {
+    @include mq(lg) {
       font-size: 2.25rem;
       margin: 0.5rem 0;
       text-align: left;
@@ -377,7 +377,7 @@ section {
     justify-content: center;
     align-items: center;
 
-    @include mq() {
+    @include mq(lg) {
       width: 30vw;
       flex-direction: row;
     }
@@ -395,7 +395,7 @@ section {
   margin: 15px auto;
   font-size: $font-175;
 
-  @include mq() {
+  @include mq(lg) {
     font-size: 2.25rem;
     margin: 15px 0;
 
@@ -407,7 +407,7 @@ section {
   a li {
     padding: 0 0.65rem;
 
-    @include mq() {
+    @include mq(lg) {
       padding: 0 0.85rem;
     }
   }
@@ -416,7 +416,7 @@ section {
 .scroll-to-main {
   padding: 2.35rem 2.125rem;
 
-  @include mq() {
+  @include mq(lg) {
     display: none;
   }
 }
@@ -425,7 +425,7 @@ section {
   font-size: 25px;
   line-height: 2;
 
-  @include mq() {
+  @include mq(lg) {
     font-size: 30px;
     bottom: 0;
     line-height: 1.5;
@@ -437,7 +437,7 @@ section {
     bottom: 0;
     left: 0;
 
-    @include mq() {
+    @include mq(lg) {
       opacity: 1;
       display: block;
       left: 0;
@@ -477,7 +477,7 @@ section {
 .contact {
   padding: 5rem 15px 15px;
 
-  @include mq() {
+  @include mq(lg) {
     padding: 8rem 8rem 0;
   }
 }
@@ -486,7 +486,7 @@ section {
   &__wrap {
     margin: -5rem 0 0;
 
-    @include mq() {
+    @include mq(lg) {
       margin: 0;
     }
   }
@@ -495,7 +495,7 @@ section {
     position: relative;
     display: inline-block;
 
-    @include mq() {
+    @include mq(lg) {
       &:nth-of-type(odd) {
         padding: 0 25rem 0 0;
 
@@ -527,7 +527,7 @@ section {
     transition: all 0.3s ease;
     margin: -1.5rem 0;
 
-    @include mq() {
+    @include mq(lg) {
       width: 45%;
       position: absolute;
       bottom: 1rem;
@@ -558,7 +558,7 @@ section {
     height: auto;
     margin: 5rem 0 2rem;
 
-    @include mq() {
+    @include mq(lg) {
       margin: 12rem 0 0 0;
 
       &.data1 {
@@ -591,7 +591,7 @@ section {
     font-size: $font-150;
     margin: -1.5rem 0 auto;
 
-    @include mq() {
+    @include mq(lg) {
       font-size: 250%;
       margin: auto;
     }
@@ -603,7 +603,7 @@ section {
     margin: 0.45rem 0;
     text-transform: capitalize;
 
-    @include mq() {
+    @include mq(lg) {
       font-size: $font-sm;
     }
   }
@@ -633,7 +633,7 @@ section {
       height: 100%;
     }
 
-    @include mq() {
+    @include mq(lg) {
       margin: 10rem auto;
     }
   }
@@ -723,7 +723,7 @@ section {
         width 0.15s ease-out 0.15s;
     }
 
-    @include mq() {
+    @include mq(lg) {
       width: 320px;
       font-size: $font-125;
     }
@@ -731,7 +731,7 @@ section {
 }
 
 .bio {
-  @include mq() {
+  @include mq(lg) {
     .section__sticky-wrap {
       position: relative;
     }
@@ -743,7 +743,7 @@ section {
   }
 
   &__img_wrap {
-    @include mq() {
+    @include mq(lg) {
       width: 50%;
       margin: -6rem 0 6rem auto;
       padding-top: 6rem;
@@ -755,7 +755,7 @@ section {
   }
 
   &__text {
-    @include mq() {
+    @include mq(lg) {
       position: absolute;
       top: 0;
       width: calc(50% - 3rem);
@@ -766,7 +766,7 @@ section {
   &__name {
     font-size: $font-150;
 
-    @include mq() {
+    @include mq(lg) {
       font-size: $font-xl;
       margin-top: 0;
       line-height: 1.45;
@@ -781,7 +781,7 @@ section {
 .skills {
   padding: 5rem 0;
 
-  @include mq() {
+  @include mq(lg) {
     width: calc(50% - 3rem);
     margin: 0 auto 8rem 0;
     padding: 8rem 0 0 0;
@@ -814,7 +814,7 @@ section {
   padding: 15px;
   position: relative;
 
-  @include mq() {
+  @include mq(lg) {
     padding: 2.125rem 8rem;
     min-height: calc(100vh - 13vh);
     justify-content: center;
@@ -824,7 +824,7 @@ section {
     margin: 2rem 0;
     padding: 0;
 
-    @include mq() {
+    @include mq(lg) {
       margin: 7rem 0 4rem;
     }
   }
@@ -832,7 +832,7 @@ section {
   &__description {
     font-size: 1rem;
 
-    @include mq() {
+    @include mq(lg) {
       font-size: $font-mq;
     }
   }
@@ -859,7 +859,7 @@ section {
   padding: 15px;
   height: 12vh;
 
-  @include mq() {
+  @include mq(lg) {
     padding: 2.125rem;
   }
 
@@ -872,7 +872,7 @@ section {
   margin-top: 80px;
   padding: 0;
 
-  @include mq() {
+  @include mq(lg) {
     margin-top: 50px;
   }
 
@@ -882,7 +882,7 @@ section {
     display: flex;
     flex-direction: column;
 
-    @include mq() {
+    @include mq(lg) {
       padding: 0 8rem;
       margin: 0 auto 80px;
       flex-direction: row;
@@ -893,7 +893,7 @@ section {
       line-height: 1.35;
       margin: 0;
 
-      @include mq() {
+      @include mq(lg) {
         font-size: 3rem;
         margin: 1.875rem 0 0;
       }
@@ -901,7 +901,7 @@ section {
 
     h1,
     p {
-      @include mq() {
+      @include mq(lg) {
         margin: 0;
       }
     }
@@ -910,7 +910,7 @@ section {
   &__title {
     margin-bottom: 2.5rem;
 
-    @include mq() {
+    @include mq(lg) {
       margin: 0 1rem 0 0;
       width: 50%;
     }
@@ -924,7 +924,7 @@ section {
   &__detail_wrap {
     margin-bottom: 2.5rem;
 
-    @include mq() {
+    @include mq(lg) {
       margin: 0.75rem 0 0 1rem;
       width: 50%;
     }
@@ -933,7 +933,7 @@ section {
   &__main {
     padding: calc(2.5rem - 15px) 0;
 
-    @include mq() {
+    @include mq(lg) {
       padding: 0 0 8rem;
     }
   }
@@ -943,7 +943,7 @@ section {
     font-family: $font-stack;
     margin: 0 auto calc(2.5rem - 15px);
 
-    @include mq() {
+    @include mq(lg) {
       font-size: $font-150;
       margin: 0 auto 4.25rem;
     }
@@ -952,7 +952,7 @@ section {
   &__main_content {
     padding: 15px;
 
-    @include mq() {
+    @include mq(lg) {
       max-width: 700px;
       margin: 4.25rem auto 5rem;
     }
@@ -974,13 +974,13 @@ section {
   &__img_lg {
     padding: 15px;
 
-    @include mq() {
+    @include mq(lg) {
       padding: 0 8rem;
     }
   }
 
   &__img-wrap {
-    @include mq () {
+    @include mq (lg) {
       display: inline-table;
       width: 100%;
       padding: 0 8rem;
@@ -991,7 +991,7 @@ section {
     width: 100%;
     padding: 0 15px;
 
-    @include mq() {
+    @include mq(lg) {
       padding: 0;
       width: 50%;
     }
@@ -1001,7 +1001,7 @@ section {
     width: 100%;
     padding: 0 15px;
 
-    @include mq() {
+    @include mq(lg) {
       padding: 0;
       width: 33.333%;
     }
@@ -1015,7 +1015,7 @@ section {
     border: 1px solid #000;
     text-align: center;
 
-    @include mq() {
+    @include mq(lg) {
       width: 45%;
       margin: 5rem 1rem;
       padding: 1.65rem 4rem;
@@ -1027,7 +1027,7 @@ section {
 .related-article {
   padding: 15px;
 
-  @include mq() {
+  @include mq(lg) {
     padding: 0 8rem;
   }
 
@@ -1037,19 +1037,19 @@ section {
   }
 
   &__content-wrap {
-    @include mq() {
+    @include mq(lg) {
       display: flex;
       width: 100%;
       margin-bottom: 4rem;
     }
   }
 
-  @include mq() {
+  @include mq(lg) {
     &__content:nth-of-type(1),
     &__content:nth-of-type(3) {
       // margin-right: 0;
 
-      @include mq() {
+      @include mq(lg) {
         margin: 0;
       }
     }
@@ -1057,7 +1057,7 @@ section {
     &__content:nth-of-type(2) {
       margin: 0;
 
-      @include mq() {
+      @include mq(lg) {
         margin: 0 1rem;
       }
     }
@@ -1068,7 +1068,7 @@ section {
     height: 14rem;
     object-fit: cover;
 
-    @include mq() {
+    @include mq(lg) {
       width: 330.67px;
       height: 250px;
     }
@@ -1088,7 +1088,7 @@ section {
     clear: both;
     padding: 3rem 0 0;
 
-    @include mq() {
+    @include mq(lg) {
       padding: 0 0 8rem;
     }
   }
@@ -1101,7 +1101,7 @@ section {
     border-right: 15px solid $primary-color;
     line-height: 0;
 
-    @include mq() {
+    @include mq(lg) {
       border-top: 20px solid transparent;
       border-bottom: 20px solid transparent;
       border-right: 20px solid $primary-color;
@@ -1116,7 +1116,7 @@ section {
     border-left: 15px solid $primary-color;
     line-height: 0;
 
-    @include mq() {
+    @include mq(lg) {
       border-top: 20px solid transparent;
       border-bottom: 20px solid transparent;
       border-left: 20px solid $primary-color;
@@ -1128,7 +1128,7 @@ section {
     margin: 0 15px;
     font-size: $font-sm;
 
-    @include mq() {
+    @include mq(lg) {
       margin: 0 1.2rem;
       font-size: $font-150;
     }
@@ -1139,7 +1139,7 @@ section {
     margin: 0 15px;
     font-size: $font-sm;
 
-    @include mq() {
+    @include mq(lg) {
       margin: 0 1.2rem;
       font-size: $font-150;
     }
@@ -1156,7 +1156,7 @@ section {
     display: flex;
     flex-direction: column;
 
-    @include mq() {
+    @include mq(lg) {
       display: block;
     }
   }
@@ -1165,7 +1165,7 @@ section {
     width: 100%;
     margin: 0 0 4rem;
 
-    @include mq() {
+    @include mq(lg) {
       width: 50%;
       min-height: 540px;
       float: left;
@@ -1185,7 +1185,7 @@ section {
     height: 280px;
     object-fit: cover;
 
-    @include mq() {
+    @include mq(lg) {
       height: 360px;
     }
   }
@@ -1200,7 +1200,7 @@ section {
     color: $secondary-color;
     text-transform: capitalize;
 
-    @include mq() {
+    @include mq(lg) {
       font-size: $font-sm;
       min-height: 3rem;
     }
