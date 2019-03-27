@@ -10,12 +10,12 @@
           <a class="contact__mailto animate-hvr-right" href="mailto:kaaisuzuki@gmail.com">kaaisuzuki@gmail.com</a></p>
           <p class="contact__description_social">or social links</p>
           <ul class="social">
-            <a href="https://www.facebook.com/suzydp" target="_blank"><li><i class="fab fa-facebook-f"></i><!--facebook--></li></a>
             <a href="https://www.linkedin.com/in/kaaisuzuki/" target="_blank"><li><i class="fab fa-linkedin" target="_blank"></i><!--linkedin--></li></a>
-            <a href="https://www.instagram.com/suzydp/" target="_blank"><li><i class="fab fa-instagram"></i><!--instagram--></li></a>
-            <a href="https://github.com/suzydp/" target="_blank"><li><i class="fab fa-github"></i><!--github--></li></a>
             <a href="https://dribbble.com/suzydp" target="_blank"><li><i class="fab fa-dribbble"></i><!--dribbble--></li></a>
+            <a href="https://github.com/suzydp/" target="_blank"><li><i class="fab fa-github"></i><!--github--></li></a>
+            <a href="https://www.instagram.com/suzydp/" target="_blank"><li><i class="fab fa-instagram"></i><!--instagram--></li></a>
             <a href="http://dp00.tumblr.com/" target="_blank"><li><i class="fab fa-tumblr"></i><!--tumblr--></li></a>
+            <a href="http://pinterest.com/suzydp" target="_blank"><li><i class="fab fa-pinterest"></i><!--pinterest--></li></a>
           </ul>
         </div>
       </section>

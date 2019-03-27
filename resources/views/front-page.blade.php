@@ -7,24 +7,12 @@
     <h2 class="top__title">Kaai Suzuki/Suzy</h2>
     <h3 class="top__description">UI/UX designer, Front-end developer<br />Based in Vancouver, Canada</h3>
     <ul class="social">
-      <a href="https://www.facebook.com/suzydp" target="_blank">
-        <li><i class="fab fa-facebook-f"></i></li><!--facebook-->
-      </a>
-      <a href="https://www.linkedin.com/in/kaaisuzuki/" target="_blank">
-        <li><i class="fab fa-linkedin" target="_blank"></i></li><!--linkedin-->
-      </a>
-      <a href="https://www.instagram.com/suzydp/" target="_blank">
-        <li><i class="fab fa-instagram"></i></li><!--instagram-->
-      </a>
-      <a href="https://github.com/suzydp/" target="_blank">
-        <li><i class="fab fa-github"></i></li><!--github-->
-      </a>
-      <a href="https://dribbble.com/suzydp" target="_blank">
-        <li><i class="fab fa-dribbble"></i></li><!--dribbble-->
-      </a>
-      <a href="http://dp00.tumblr.com/" target="_blank">
-        <li><i class="fab fa-tumblr"></i></li><!--tumblr-->
-      </a>
+      <a href="https://www.linkedin.com/in/kaaisuzuki/" target="_blank"><li><i class="fab fa-linkedin" target="_blank"></i><!--linkedin--></li></a>
+      <a href="https://dribbble.com/suzydp" target="_blank"><li><i class="fab fa-dribbble"></i><!--dribbble--></li></a>
+      <a href="https://github.com/suzydp/" target="_blank"><li><i class="fab fa-github"></i><!--github--></li></a>
+      <a href="https://www.instagram.com/suzydp/" target="_blank"><li><i class="fab fa-instagram"></i><!--instagram--></li></a>
+      <a href="http://dp00.tumblr.com/" target="_blank"><li><i class="fab fa-tumblr"></i><!--tumblr--></li></a>
+      <a href="http://pinterest.com/suzydp" target="_blank"><li><i class="fab fa-pinterest"></i><!--pinterest--></li></a>
     </ul>
   </div>
   <div class="top__img-wrap">
@@ -93,7 +81,7 @@
           <a href="https://www.linkedin.com/in/suzydp/">
             <li class="bio__description_link_list">See the Profile on LinkedIn</li>
           </a>
-          <a href="https://bit.ly/szdp-cv">
+          <a href="http://bit.ly/2I0IzwK">
             <li class="bio__description_link_list">Resume</li>
           </a>
         </ul>
