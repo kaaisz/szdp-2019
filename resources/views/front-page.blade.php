@@ -93,7 +93,7 @@
           <a href="https://www.linkedin.com/in/suzydp/">
             <li class="bio__description_link_list">See the Profile on LinkedIn</li>
           </a>
-          <a href="assets/pdf/resume-kaaisuzuki.pdf">
+          <a href="https://bit.ly/szdp-cv">
             <li class="bio__description_link_list">Resume</li>
           </a>
         </ul>
