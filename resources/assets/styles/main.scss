@@ -119,8 +119,8 @@ strong {
 }
 
 section {
-  width: 100vw;
-  min-height: calc(100vh - 80px);
+  width: 100%;
+  min-height: calc(100vh - 90px);
   padding: 15px;
 
   @include mq() {
@@ -161,8 +161,8 @@ section {
 }
 
 .header {
-  width: 100vw;
-  height: 80px;
+  width: 100%;
+  height: 90px;
 
   @include mq() {
     height: 180px;
@@ -251,7 +251,7 @@ section {
     }
 
     @include mq(lg) {
-      margin: 52px 3rem 0 0;
+      margin: 52px 2.95rem 0 0;
     }
 
     &.open {
@@ -347,7 +347,7 @@ section {
 }
 
 .top {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 90px);
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -421,7 +421,7 @@ section {
     align-items: center;
 
     @include mq() {
-      width: 60vw;
+      width: 55%;
     }
 
     @include mq(lg) {
@@ -456,19 +456,22 @@ section {
 
     @include mq() {
       padding: 0 1.05rem;
+      font-size: 175%;
     }
 
     @include mq(lg) {
       padding: 0 0.85rem;
+      font-size: 100%;
     }
   }
 }
 
 .scroll-to-main {
   padding: 2.35rem 2.125rem;
+  display: none;
 
   @include mq(lg) {
-    display: none;
+    display: block;
   }
 }
 
@@ -643,7 +646,7 @@ section {
   }
 
   &__title {
-    font-size: $font-150;
+    font-size: $font-xl;
     margin: -1.5rem 0 auto;
 
     @include mq(lg) {
@@ -658,6 +661,10 @@ section {
     margin: 0.45rem 0;
     text-transform: capitalize;
 
+    @include mq() {
+      font-size: $font-120;
+    }
+
     @include mq(lg) {
       font-size: $font-sm;
     }
@@ -670,7 +677,7 @@ section {
     text-align: center;
     box-sizing: border-box;
     margin: 5rem auto 10rem;
-    padding: 1em 2em;
+    padding: 1rem 2rem;
 
     // Using inset box-shadow instead of border for sizing simplicity
     box-shadow: inset 0 0 0 1px $primary-color;
@@ -686,6 +693,11 @@ section {
       position: absolute;
       width: 100%;
       height: 100%;
+    }
+
+    @include mq() {
+      padding: 1.5rem 2rem;
+      width: 50%;
     }
 
     @include mq(lg) {
@@ -930,7 +942,7 @@ section {
 }
 
 .article {
-  margin-top: 80px;
+  margin-top: 90px;
   padding: 0;
 
   @include mq(lg) {
@@ -949,7 +961,7 @@ section {
 
     @include mq(lg) {
       padding: 0 8rem;
-      margin: 0 auto 80px;
+      margin: 0 auto 90px;
       flex-direction: row;
     }
 
@@ -1276,6 +1288,10 @@ section {
     font-size: $font-xs;
     color: $secondary-color;
     text-transform: capitalize;
+
+    @include mq() {
+      font-size: $font-120;
+    }
 
     @include mq(lg) {
       font-size: $font-sm;
