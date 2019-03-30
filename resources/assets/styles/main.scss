@@ -177,18 +177,57 @@ section {
     top: 0;
     width: 15%;
     height: auto;
-    margin: 15px 0 0 15px;
+    margin: -30px 0 0 15px;
     padding: 0;
     z-index: 2;
 
     @include mq() {
-      margin: 30px 0 0 30px;
+      width: 12%;
+      margin: -10px 0 0 25px;
     }
 
     @include mq(lg) {
       width: 64px;
       height: auto;
-      margin: 2.125rem 0 0 2.125rem;
+      margin: -0.775rem 0 0 2.125rem;
+    }
+
+    &-svg {
+      margin: 0;
+
+      .st0 {
+        fill: none;
+        stroke: #231815;
+        stroke-width: 2;
+      }
+    }
+
+    @include mq(lg) {
+      &-svg:hover {
+        .rubZJJkj_0 {
+          stroke-dasharray: 602 604;
+          stroke-dashoffset: 603;
+          animation: rubZJJkj_draw 1000ms linear 0ms forwards;
+        }
+
+        .rubZJJkj_1 {
+          stroke-dasharray: 254 256;
+          stroke-dashoffset: 255;
+          animation: rubZJJkj_draw 500ms linear 1000ms forwards;
+        }
+
+        .rubZJJkj_2 {
+          stroke-dasharray: 516 518;
+          stroke-dashoffset: 517;
+          animation: rubZJJkj_draw 1128ms linear 1872ms forwards;
+        }
+
+        @keyframes rubZJJkj_draw {
+          100% {
+            stroke-dashoffset: 0;
+          }
+        }
+      }
     }
   }
 }
