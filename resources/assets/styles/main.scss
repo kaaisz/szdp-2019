@@ -197,7 +197,7 @@ section {
 
       .st0 {
         fill: none;
-        stroke: #231815;
+        stroke: $primary-color;
         stroke-width: 2;
       }
     }
@@ -1046,6 +1046,14 @@ section {
     }
   }
 
+  &__link {
+    display: block;
+    width: max-content;
+    font-size: 1.17em;
+    margin: 1em 0;
+    border-bottom: 1px solid $primary-color;
+  }
+
   &__main {
     padding: calc(2.5rem - 15px) 0;
 
@@ -1136,7 +1144,7 @@ section {
     width: 100%;
     margin: 1rem 0;
     padding: 1rem 4rem;
-    border: 1px solid #000;
+    border: 1px solid $primary-color;
     text-align: center;
 
     @include mq(lg) {
