@@ -42,6 +42,7 @@ $font-descriptions-jp: "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
 
 $primary-color:#222;
 $secondary-color: #555;
+$description-color: #777;
 $bgcolor:#fafafa;
 $section-title: 3.5rem;
 $font-xxl: 300%;
@@ -880,7 +881,16 @@ section {
   }
 
   &__description {
-    font-size: 14px;
+    font-size: $font-sm;
+    color: $description-color;
+
+    &_link_list {
+      display: block;
+      width: max-content;
+      font-size: $font-sm;
+      margin: 1em 0;
+      border-bottom: 1px solid #222;
+    }
   }
 
   &__caption {
@@ -947,16 +957,22 @@ section {
     @include mq(lg) {
       font-size: $font-mq;
     }
+
+    &_mail,
+    &_social {
+      font-size: 14px;
+      color: $description-color;
+    }
+
+    &_social {
+      margin: auto 0 0;
+    }
   }
 
   &__mailto {
     display: inline-block;
     margin: 0 0 1rem;
     font-size: 1.65rem;
-  }
-
-  &__description_social {
-    margin: auto 0 0;
   }
 
   .social {

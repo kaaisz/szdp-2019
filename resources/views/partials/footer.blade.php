@@ -6,7 +6,7 @@
           <p class="contact__description">Please let me know if you have any idea for linking up with me.<br>I’d love to hear from you :)</p>
         </div>
         <div class="contact__details-wrap">
-          <p class="contact__mailto_sub">Contact to <br>
+          <p class="contact__description_mail">Contact to <br>
           <a class="contact__mailto animate-hvr-right" href="mailto:kaaisuzuki@gmail.com">kaaisuzuki@gmail.com</a></p>
           <p class="contact__description_social">or social links</p>
           <ul class="social">
