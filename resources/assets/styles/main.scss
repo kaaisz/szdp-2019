@@ -40,6 +40,8 @@ $font-stack-jp: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "Osaka", "
 $font-descriptions: "Helvetica Neue Light", sans-serif;
 $font-descriptions-jp: "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
 
+$font-accent: "Futura Std", "Helvetica Neue Ultra Light", sans-serif;
+
 $primary-color:#222;
 $secondary-color: #555;
 $description-color: #777;
@@ -152,6 +154,7 @@ section {
 
   @include mq() {
     font-size: $font-xxl;
+    letter-spacing: 10px;
   }
 
   @include mq(lg) {
@@ -929,7 +932,7 @@ section {
 .contact {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   min-height: calc(100vh - 12vh);
   position: relative;
 
@@ -952,7 +955,8 @@ section {
   }
 
   &__description {
-    font-size: 1rem;
+    font-size: 14px;
+    color: $description-color;
 
     @include mq(lg) {
       font-size: $font-mq;
@@ -960,8 +964,13 @@ section {
 
     &_mail,
     &_social {
-      font-size: 14px;
-      color: $description-color;
+      font-family: $font-accent;
+      font-size: 12px;
+      color: $secondary-color;
+
+      @include mq() {
+        font-size: 14px;
+      }
     }
 
     &_social {
@@ -996,6 +1005,7 @@ section {
   }
 
   p {
+    font-family: $font-accent;
     position: relative;
   }
 }
