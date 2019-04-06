@@ -394,7 +394,7 @@ section {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 0 15px 15px;
 
   @include mq() {
@@ -423,7 +423,7 @@ section {
   }
 
   &__title {
-    margin: 1.25rem auto;
+    margin: 1.25rem auto 0.5rem;
     font-size: $font-150;
     letter-spacing: 4px;
 
@@ -457,7 +457,7 @@ section {
   }
 
   &__img-wrap {
-    width: 70vw;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -898,6 +898,7 @@ section {
 
   &__caption {
     margin: 0;
+    font-size: 12px;
   }
 }
 
