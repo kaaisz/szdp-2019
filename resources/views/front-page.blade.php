@@ -89,34 +89,48 @@
       <div class="skills" id="skills">
         <div class="skills__container">
           <h2 class="section__title_skills">SKILLS</h2>
-          <div class="skills__description-wrap">
-            <h4 class="skills__head">Specialities</h4>
-            <ul class="skills__list">
-              <li>UI design and Graphic design</li>
-              <li>front-end development for building Website</li>
-              <li>Understanding Typography / ColorSheme / UX strategy</li>
-              <li>Digital / Analog Illustration</li>
-            </ul>
+          <div class="skills__content">
+            <h3 class="skills__head">Design</h3>
+            <div class="skills__list">
+              <h4>UI design and Graphic design</h4>
+              <p>
+                Illustrator / Photoshop / Sketch / Figma / Indesign / XD / Invision Studio
+              </p>
+              <h4>Prototyping</h4>
+              <p>
+                Figma with Principle / XD / Invision Studio
+              </p>
+              <h4>Typography / ColorSheme</h4>
+              <h4>Digital / Analog Illustration</h4>
+              <h4>Knowledge of UX strategy</h4>
+            </div>
           </div>
           <div class="skills__content">
-            <h4 class="skills__head">Fluent in</h4>
-            <ul class="skills__list">
-              <li>Adobe Illustrator, Photoshop, indesign, XD, Sketch and Figma</li>
-              <li>Developing with Bootstrap, Material Design UI</li>
-              <li>Typography / ColorScheme / UX strategy</li>
-            </ul>
+            <h3 class="skills__head">Development</h3>
+            <div class="skills__list">
+              <h4>Responsive Website Development</h4>
+              <p>
+                HTML / CSS and Sass with BEM, OOCSS or SMACSS (compile with Gulp) / Javascript / Bootstrap / jQuery / GSAP / Git
+              </p>
+              <h4>Wordpress Development</h4>
+              <p>
+                Creating Wordpress theme / Knowledge of plugins
+              </p>
+              <h4>Web App development</h4>
+              <p>
+                PHP / MySQL / React.js / Webpack / Material UI / Develop with Web API / Node.js (with Express framework) / MongoDB / Redux
+              </p>
+              <h4>Other</h4>
+              <p>
+                Google Apps(Docs, sheets, slides and forms including to use Google Apps Script) / Google Analytics / Google Optimize / SEO solution
+              </p>
+            </div>
           </div>
-          <div class="skills__content">
-            <h4 class="skills__head">Software/Programming language</h4>
-            <ul class="skills__list">
-              <li>Design and Prototyping</li>
-                <p>Illustrator / Photoshop / Sketch / Figma / Indesign / XD / Invision Studio</p>
-              <li>Development</li>
-                <p>HTML5 / CSS3 / Sass / Git / PHP / Wordpress / React.js / Gulp / Webpack / Redux / Express(For MERN stack) / Node.js /
-                MySQL / MongoDB / Ajax / BEM-SMACSS-OOCSS / SVG Animation / jQuery / GSAP / Firebase </p>
-              <li>Other</li>
-                <p>Google Apps(Docs, sheets, slides and forms including to use Google Apps Script) / Google Analytics / Google Optimize / SEO solution</p>
-            </ul>
+          <!-- <div class="skills__content">
+            <h3 class="skills__head">Outside of work</h3>
+            <div class="skills__list">
+              <p>Kaai is Electronic music(Particularly Ambient Music), Yoga enthusiast and gallery-goers who really loves exploring art pieces, new music, and fashion. She is always seeking fields for challenge something to push outside her comfort zone especially about improving her creativity.</p>
+            </div> -->
           </div>
         </div>
       </div>
