@@ -385,11 +385,18 @@ section {
   }
 
   &__link {
+    color: #bbb;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 10px;
+    transition: all 0.2s;
 
     li {
       line-height: 2;
+    }
+
+    &:hover {
+      color: $primary-color;
+      transition: all 0.2s;
     }
   }
 }
