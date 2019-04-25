@@ -73,15 +73,14 @@
       </div>
       <div class="bio__text">
         <h3 class="bio__name">Kaai Suzuki,<br>UI/UX Designer and Front-end developer</h3>
-        <p class="bio__description">She is stronglly focusing on branding, based on experience in fashion design and graphic design. 
-          Emphasizes creating a smooth flow for users and clients logically when designing and developing websites.
-          Over three years of work experience, and always striving to improve by learning about new designs, frameworks, libraries, and more. 
+        <p class="bio__description">
+          <?php echo get_field('bio_txt', '2344'); ?>
         </p>
         <ul class="bio__description_link">
-          <a href="https://www.linkedin.com/in/suzydp/">
+          <a href="<?php echo get_field('bio_link_linkedin', '2344'); ?>">
             <li class="bio__description_link_list">See the Profile on LinkedIn</li>
           </a>
-          <a href="http://bit.ly/2I0IzwK">
+          <a href="<?php echo get_field('bio_link_resume', '2344'); ?>">
             <li class="bio__description_link_list">Resume</li>
           </a>
         </ul>
