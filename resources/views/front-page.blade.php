@@ -72,7 +72,7 @@
         </p>
       </div>
       <div class="bio__text">
-        <h3 class="bio__name">Kaai Suzuki,<br>UI/UX Designer and Front-end developer</h3>
+        <h3 class="bio__name"><?php echo get_field('bio_intro', '2344'); ?></h3>
         <p class="bio__description">
           <?php echo get_field('bio_txt', '2344'); ?>
         </p>
