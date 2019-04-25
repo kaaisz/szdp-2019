@@ -4,7 +4,7 @@
   <!-- @include('partials.page-header') -->
 <section id="top" class="top">
   <div class="top__title-wrap">
-    <h2 class="top__title">Kaai Suzuki/Suzy</h2>
+    <h2 class="top__title"><?php bloginfo(); ?></h2>
     <h3 class="top__description">UI/UX designer, Front-end developer<br />Based in Vancouver, Canada</h3>
     <ul class="social">
       <a href="https://www.linkedin.com/in/kaaisuzuki/" target="_blank"><li><i class="fab fa-linkedin" target="_blank"></i><!--linkedin--></li></a>
