@@ -15,7 +15,7 @@
       <?php 
         $posts = get_posts(array(
           'posts_per_page' => 10, // @todo THIS IS NOT ACTIVE
-          'category_ID' => '3'
+          'category_ID' => '5'
         ));
         $cnt = 0;
         while(have_posts()) : the_post(); ?>

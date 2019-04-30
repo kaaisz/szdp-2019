@@ -37,7 +37,7 @@
         global $post;
         $args = (array(
           'posts_per_page' => 6, // numbers of pages appearing
-          'category' => '185' // Cateogory ID (category_name is also available with slag)
+          'category' => '4' // Cateogory ID (category_name is also available with slag)
         ));
         $posts = get_posts($args);
           foreach($posts as $post):
@@ -56,7 +56,7 @@
         wp_reset_postdata(); 
       ?>
     </div>
-    <a class="button draw meet" href="<?php echo(get_category_link(3))?>">View More</a>
+    <a class="button draw meet" href="<?php echo(get_category_link(5))?>">View More</a>
 
   </section>
 
