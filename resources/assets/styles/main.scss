@@ -1254,7 +1254,7 @@ section {
     object-fit: cover;
 
     @include mq(lg) {
-      width: 330.67px;
+      width: 100%;
       height: 220px;
     }
   }
