@@ -154,7 +154,7 @@ section {
 .section__title_skills {
   margin: 0 0 4rem;
   font-size: $font-xl;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
   text-transform: uppercase;
 
   @include mq() {
@@ -385,10 +385,14 @@ section {
   }
 
   &__link {
-    color: #bbb;
     text-transform: uppercase;
-    letter-spacing: 10px;
+    letter-spacing: 7px;
     transition: all 0.2s;
+
+    @include mq(lg) {
+      color: #bbb;
+      letter-spacing: 10px;
+    }
 
     li {
       line-height: 2;
@@ -437,7 +441,7 @@ section {
   &__title {
     margin: 1.25rem auto 0.5rem;
     font-size: $font-150;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 
     @include mq() {
       margin: 1rem auto 1.25rem;
@@ -1133,6 +1137,11 @@ section {
       max-width: 700px;
       margin: 4.25rem auto 5rem;
     }
+
+    & > p {
+      font-size: 14px;
+      color: $description-color;
+    }
   }
 
   p {
@@ -1218,7 +1227,7 @@ section {
 
   &__title {
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 7px;
   }
 
   &__content-wrap {
@@ -1250,13 +1259,17 @@ section {
 
   &__img {
     width: 100%;
-    height: auto;
+    max-height: 220px;
     object-fit: cover;
 
     @include mq(lg) {
       width: 100%;
       height: 220px;
     }
+  }
+
+  &__content-title {
+    margin: 0 0 1.75rem;
   }
 }
 
@@ -1367,11 +1380,11 @@ section {
 
   &__img {
     width: 100%;
-    height: auto;
+    max-height: 220px;
     object-fit: cover;
 
     @include mq(lg) {
-      height: 320px;
+      max-height: 320px;
     }
   }
 

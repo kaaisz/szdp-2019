@@ -56,7 +56,7 @@
       <div class="related-article__content">
         <a href="<?php the_permalink(); ?>">
           <?php the_post_thumbnail('large', array('class' => 'related-article__img'));?>
-          <h3><?php the_title(); ?></h3>
+          <h3 class="related-article__content-title"><?php the_title(); ?></h3>
         </a>
       </div>
         <?php 
