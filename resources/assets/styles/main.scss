@@ -420,12 +420,12 @@ section {
 
   @include mq(lg) {
     height: 100vh;
-    max-width: calc(100% - 16rem);
+    max-width: 1580px;
     margin: -8rem auto;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    padding: 0;
+    padding: 2.125rem 8rem;
     position: relative;
   }
 
@@ -596,9 +596,9 @@ section {
   }
 
   @include mq(lg) {
-    max-width: calc(100% - 16rem);
+    padding: 8rem 8rem 0;
+    max-width: 1580px;
     margin: auto;
-    padding: 8rem 0 0;
   }
 }
 
@@ -608,8 +608,6 @@ section {
 
     @include mq(lg) {
       margin: 0;
-      display: flex;
-      flex-direction: column;
     }
   }
 
