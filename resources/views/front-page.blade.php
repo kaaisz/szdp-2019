@@ -77,12 +77,27 @@
           <?php echo get_field('bio_txt', '2344'); ?>
         </p>
         <ul class="bio__description_link">
-          <a href="<?php echo get_field('bio_link_linkedin', '2344'); ?>">
-            <li class="bio__description_link_list">See the Profile on LinkedIn</li>
-          </a>
-          <a href="<?php echo get_field('bio_link_resume', '2344'); ?>">
-            <li class="bio__description_link_list">Resume</li>
-          </a>
+          <?php 
+            $link_linkedin = get_field('bio_link_linkedin', '2344');
+            if($link_linkedin):
+              $link_linkedin_url = $link_linkedin['url'];
+              $link_linkedin_title = $link_linkedin['title'];
+              $link_linkedin_target = $link_linkedin['target'] ? $link_linkedin['target'] : '_blank';
+          ?>
+            <li class="bio__description_link_list">
+              <a href="<?php echo esc_url($link_linkedin_url); ?>" target="<?php esc_attr($link_linkedin_target); ?>"><?php echo esc_html($link_linkedin_title); ?></a>
+            </li>
+          <?php endif;
+            $link_resume = get_field('bio_link_resume', '2344');
+            if($link_resume):
+              $link_resume_url = $link_resume['url'];
+              $link_resume_title = $link_resume['title'];
+              $link_resume_target = $link_resume['target'] ? $link_resume['target'] : '_blank';
+          ?>
+            <li class="bio__description_link_list">
+              <a href="<?php echo esc_url($link_resume_url); ?>" target="<?php esc_attr($link_resume_target); ?>"><?php echo esc_html($link_resume_title); ?></a>
+            </li>
+          <?php endif; ?>
         </ul>
       </div>
       <div class="skills" id="skills">
