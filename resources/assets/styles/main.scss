@@ -163,9 +163,10 @@ section {
   }
 
   @include mq(lg) {
+    max-width: 1580px;
     font-size: $section-title;
     line-height: 1;
-    margin: 0 0 4rem;
+    margin: 0 auto 4rem;
   }
 }
 
@@ -1359,6 +1360,8 @@ section {
 
     @include mq(lg) {
       display: block;
+      max-width: 1580px;
+      margin: 0 auto;
     }
   }
 
