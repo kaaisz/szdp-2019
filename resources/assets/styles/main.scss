@@ -48,8 +48,8 @@ $font-descriptions-jp: "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
 $font-accent: "Futura-Std", "Apercu", "Helvetica Neue Ultra Light", sans-serif;
 
 $primary-color:#222;
-$secondary-color: #555;
-$description-color: #777;
+$description-color: #555;
+$secondary-color: #777;
 $bgcolor:#fafafa;
 $section-title: 3.5rem;
 $font-xxl: 300%;
@@ -153,7 +153,7 @@ section {
 .section__title_bio,
 .section__title_skills {
   margin: 0 0 4rem;
-  font-size: $font-xl;
+  font-size: $font-175;
   letter-spacing: 7px;
   text-transform: uppercase;
 
@@ -442,8 +442,11 @@ section {
 
   &__title {
     margin: 1.25rem auto 0.5rem;
-    font-size: $font-150;
-    letter-spacing: 5px;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    line-height: 1.25;
 
     @include mq() {
       margin: 1rem auto 1.25rem;
@@ -452,14 +455,15 @@ section {
 
     @include mq(lg) {
       margin: 0;
-      font-size: $section-title;
+      font-size: 70px;
+      letter-spacing: 10px;
     }
   }
 
   &__description {
     font-size: 100%;
+    max-width: 320px;
     margin: 0;
-    letter-spacing: 0.5px;
     text-align: center;
 
     @include mq() {
@@ -468,9 +472,10 @@ section {
     }
 
     @include mq(lg) {
-      font-size: 2.25rem;
+      font-size: 24px;
       margin: 0.5rem 0;
       text-align: left;
+      max-width: 540px;
     }
   }
 
@@ -517,7 +522,7 @@ section {
 
     @include mq() {
       padding: 0 1.05rem;
-      font-size: 175%;
+      font-size: $font-175;
     }
 
     @include mq(lg) {
@@ -709,7 +714,7 @@ section {
   }
 
   &__title {
-    font-size: $font-175;
+    font-size: $font-150;
     margin: -1.5rem 0 auto;
 
     @include mq(lg) {
@@ -894,7 +899,7 @@ section {
   }
 
   &__name {
-    font-size: $font-150;
+    font-size: $font-125;
 
     @include mq(lg) {
       font-size: $font-xl;
@@ -916,9 +921,11 @@ section {
     }
   }
 
-  &__caption {
+  &__caption,
+  &__caption a {
     margin: 0;
     font-size: 12px;
+    color: $secondary-color;
   }
 }
 
@@ -932,7 +939,7 @@ section {
   }
 
   &__head {
-    font-size: 23px;
+    font-size: 24px;
     margin: 16px 0;
   }
 
@@ -940,12 +947,12 @@ section {
     padding: 0;
 
     h4 {
-      font-size: 18px;
+      font-size: 16px;
       margin: 0.75rem 0 0.15rem;
     }
 
     p {
-      font-size: $font-sm;
+      font-size: 14px;
       color: $description-color;
       margin: 0.15rem 0 0.75rem;
     }
