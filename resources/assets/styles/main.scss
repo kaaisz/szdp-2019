@@ -437,6 +437,7 @@ section {
 
     @include mq(lg) {
       width: calc(100% - 25rem);
+      padding: 0 20px 0 0;
     }
   }
 
@@ -455,7 +456,7 @@ section {
 
     @include mq(lg) {
       margin: 0;
-      font-size: 70px;
+      font-size: 64px;
       letter-spacing: 10px;
     }
   }
@@ -469,13 +470,14 @@ section {
     @include mq() {
       font-size: $font-150;
       margin: auto;
+      max-width: 540px;
     }
 
     @include mq(lg) {
-      font-size: 24px;
+      font-size: 18px;
       margin: 0.5rem 0;
       text-align: left;
-      max-width: 540px;
+      max-width: 680px;
     }
   }
 
@@ -725,9 +727,13 @@ section {
 
   &__tag {
     font-size: $font-xs;
-    color: $secondary-color;
+    color: $description-color;
     margin: 0.45rem 0;
     text-transform: capitalize;
+
+    & > a {
+      color: $description-color;
+    }
 
     @include mq() {
       font-size: $font-120;
@@ -923,6 +929,7 @@ section {
 
   &__caption,
   &__caption a {
+    font-family: $font-stack;
     margin: 0;
     font-size: 12px;
     color: $secondary-color;
@@ -1098,7 +1105,15 @@ section {
 
   &__description {
     margin: 1rem 0;
-    color: $secondary-color;
+    color: $primary-color;
+
+    @include mq(lg) {
+      font-family: $font-stack;
+      color: $primary-color;
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
   }
 
   &__detail_wrap {
@@ -1107,6 +1122,19 @@ section {
     @include mq(lg) {
       margin: 0.75rem 0 0 1rem;
       width: 50%;
+    }
+  }
+
+  &__detail {
+    @include mq(lg) {
+      font-size: 16px;
+    }
+
+    &_description {
+      @include mq(lg) {
+        font-size: 14px;
+        margin: 0 0 3rem;
+      }
     }
   }
 
@@ -1404,12 +1432,17 @@ section {
   &__title {
     margin: 0.85rem 0;
     font-size: $font-150;
+    line-height: 1.25;
   }
 
   &__tag {
     font-size: $font-xs;
-    color: $secondary-color;
+    color: $description-color;
     text-transform: capitalize;
+
+    & > a {
+      color: $secondary-color;
+    }
 
     @include mq() {
       font-size: $font-120;
