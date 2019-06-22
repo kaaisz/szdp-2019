@@ -1113,13 +1113,6 @@ section {
         margin: 1.875rem 0 0;
       }
     }
-
-    h1,
-    p {
-      @include mq(lg) {
-        margin: 0;
-      }
-    }
   }
 
   &__title {
@@ -1140,7 +1133,7 @@ section {
       color: $primary-color;
       font-size: 20px;
       font-weight: 400;
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
     }
   }
 
@@ -1156,6 +1149,7 @@ section {
   &__detail {
     @include mq(lg) {
       font-size: 16px;
+      margin-bottom: 8px;
     }
 
     &_description {
