@@ -1023,6 +1023,29 @@ section {
     display: inline-block;
     margin: 0 0 1rem;
     font-size: 1.65rem;
+
+    &.animate-hvr-right {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 2px;
+        margin-top: 2px;
+        right: 0;
+        background: $primary-color;
+        transition: width 0.3s ease;
+        -webkit-transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+        left: 0;
+        background: $primary-color;
+      }
+    }
   }
 
   .social {
