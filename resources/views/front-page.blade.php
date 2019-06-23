@@ -20,7 +20,7 @@
   </div>
 </section>
   <div class="scroll-to-main">
-    <a id="scroll__to-works" class="scroll-arrow to-works" href="#works">↓Case Study</a>
+    <a id="scroll__to-works" class="scroll-arrow to-works" href="#works">Scroll Me</a>
   </div>
 
   <section id="works" class="works">
@@ -79,7 +79,7 @@
         <ul class="bio__description_link">
           <?php 
             $link_linkedin = get_field('bio_link_linkedin', '2344');
-            if($link_linkedin):
+            
               $link_linkedin_url = $link_linkedin['url'];
               $link_linkedin_title = $link_linkedin['title'];
               $link_linkedin_target = $link_linkedin['target'] ? $link_linkedin['target'] : '_blank';
@@ -87,7 +87,7 @@
             <li class="bio__description_link_list">
               <a href="<?php echo esc_url($link_linkedin_url); ?>" target="<?php esc_attr($link_linkedin_target); ?>"><?php echo esc_html($link_linkedin_title); ?></a>
             </li>
-          <?php endif;
+          <?php
             $link_resume = get_field('bio_link_resume', '2344');
             if($link_resume):
               $link_resume_url = $link_resume['url'];
