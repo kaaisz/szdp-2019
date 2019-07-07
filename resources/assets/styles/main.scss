@@ -421,7 +421,7 @@ section {
 
   @include mq(lg) {
     height: 100vh;
-    max-width: 1580px;
+    max-width: 1480px;
     margin: -8rem auto;
     flex-direction: row;
     align-items: center;
@@ -437,6 +437,11 @@ section {
 
     @include mq(lg) {
       width: calc(100% - 25rem);
+      padding: 0 20px 0 0;
+    }
+
+    @include mq(xl) {
+      width: calc(100% - 35rem);
       padding: 0 20px 0 0;
     }
   }
