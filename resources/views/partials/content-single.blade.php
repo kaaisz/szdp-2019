@@ -24,25 +24,6 @@
         remove_filter('the_content', 'wpautop');
         the_content();
       ?>
-
-      <div class="article__links">
-        <?php
-          if ( get_field('article_source_url') && get_field('article_github_url')) {
-        ?>
-          <a class="article__link_button" href="{!! the_field('article_source_url') !!}">See the website</a>
-          <a class="article__link_button" href="{!! the_field('article_github_url') !!}">View Code on Github</a>
-        <?php 
-          } else if ( get_field('article_source_url') ) {
-        ?>
-          <a class="article__link_button" href="{!! the_field('article_source_url') !!}">See the website</a>
-        <?php 
-          } else {
-        ?>
-          <a class="article__link_button" href="{!! the_field('article_github_url') !!}">View Code on Github</a>
-        <?php
-          }
-        ?>
-      </div>
     </div>
   </div>
 
