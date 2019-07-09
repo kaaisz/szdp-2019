@@ -4,12 +4,18 @@
       <h1 class="article__title left">{!! get_the_title() !!}</h1>
       <div class="article__detail_wrap">
         <!-- @include('partials/entry-meta') -->
-        <p class="article__description">{!! post_custom('description'); !!}</p>
-        <h3 class="article__detail">Responsibility</h3>
-        <p class="article__detail_description">{!! the_field('article_responsibility'); !!}</p>
+        <p class="article__description">{!! the_field('article_description'); !!}</p>
+        <?php if ( get_field( 'article_responsibility' ) ): ?>
+          <h3 class="article__detail">Responsibility</h3>
+          <p class="article__detail_description">{!! the_field('article_responsibility'); !!}</p>
+        <?php 
+          endif;
+          if ( get_field( 'article_created_with' ) ):
+        ?>
         <h3 class="article__detail">Created with</h3>
         <p class="article__detail_description">{!! the_field('article_created_with'); !!}</p>
         <?php
+          endif;
           if ( get_field('article_source_url') ) { ?>
             <a class="article__link" href="{!! the_field('article_source_url') !!}">See the website</a>
         <?php } ?>
