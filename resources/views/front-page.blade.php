@@ -103,48 +103,8 @@
       <div class="skills" id="skills">
         <div class="skills__container">
           <h2 class="section__title_skills">SKILLS</h2>
-          <div class="skills__content">
-            <h3 class="skills__head">Design</h3>
-            <div class="skills__list">
-              <h4>UI design and Graphic design</h4>
-              <p>
-                Illustrator / Photoshop / Sketch / Figma / Indesign / XD / Invision Studio
-              </p>
-              <h4>Prototyping</h4>
-              <p>
-                Figma with Principle / XD / Invision Studio
-              </p>
-              <h4>Typography / ColorSheme</h4>
-              <h4>Digital / Analog Illustration</h4>
-              <h4>Knowledge of UX strategy</h4>
-            </div>
-          </div>
-          <div class="skills__content">
-            <h3 class="skills__head">Development</h3>
-            <div class="skills__list">
-              <h4>Responsive Website Development</h4>
-              <p>
-                HTML / CSS and Sass with BEM, OOCSS or SMACSS (compile with Gulp) / Javascript / Bootstrap / jQuery / GSAP / Git
-              </p>
-              <h4>Wordpress Development</h4>
-              <p>
-                Creating Wordpress theme / Knowledge of plugins
-              </p>
-              <h4>Web App development</h4>
-              <p>
-                PHP / MySQL / React.js / Webpack / Material UI / Develop with Web API / Node.js (with Express framework) / MongoDB / Redux
-              </p>
-              <h4>Other</h4>
-              <p>
-                Google Apps(Docs, sheets, slides and forms including to use Google Apps Script) / Google Analytics / Google Optimize / SEO solution
-              </p>
-            </div>
-          </div>
-          <!-- <div class="skills__content">
-            <h3 class="skills__head">Outside of work</h3>
-            <div class="skills__list">
-              <p>Kaai is Electronic music(Particularly Ambient Music), Yoga enthusiast and gallery-goers who really loves exploring art pieces, new music, and fashion. She is always seeking fields for challenge something to push outside her comfort zone especially about improving her creativity.</p>
-            </div> -->
+          <!-- TODO: id in parametor must be equal to PAGE ID -->
+          <?php the_field( 'skills_editor', '3291' ); ?>
           </div>
         </div>
       </div>
