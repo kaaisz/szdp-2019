@@ -80,7 +80,7 @@ $breakpoints: (
 * {
   box-sizing: border-box;
   font-family: $font-stack;
-  font-weight: 200;
+  font-weight: 300;
   text-decoration: none;
   list-style-type: none;
   line-height: 1.5;
@@ -1145,11 +1145,11 @@ section {
   }
 
   &__description {
-    margin: 1rem 0;
+    font-family: $font-stack;
+    margin: 1rem 0 2rem;
     color: $primary-color;
 
     @include mq(lg) {
-      font-family: $font-stack;
       color: $primary-color;
       font-size: 20px;
       font-weight: 400;
@@ -1167,12 +1167,16 @@ section {
   }
 
   &__detail {
+    margin: 0 0 0.5rem;
+
     @include mq(lg) {
       font-size: 16px;
       margin-bottom: 8px;
     }
 
     &_description {
+      margin: 0.5rem 0 2rem;
+
       @include mq(lg) {
         font-size: 14px;
         margin: 0 0 3rem;
@@ -1307,7 +1311,7 @@ section {
     display: inline-block;
     width: 100%;
     margin: 1rem 0;
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
     border: 1px solid $primary-color;
     text-align: center;
 
