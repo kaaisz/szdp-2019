@@ -1153,7 +1153,7 @@ section {
       color: $primary-color;
       font-size: 20px;
       font-weight: 400;
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
     }
   }
 
@@ -1309,7 +1309,7 @@ section {
     @include mq(lg) {
       width: 45%;
       margin: 5rem 1rem;
-      padding: 1.65rem 4rem;
+      padding: 1.65rem 2.5rem;
     }
   }
 }
