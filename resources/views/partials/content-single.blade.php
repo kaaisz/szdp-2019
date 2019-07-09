@@ -6,22 +6,17 @@
         <!-- @include('partials/entry-meta') -->
         <p class="article__description">{!! post_custom('description'); !!}</p>
         <h3 class="article__detail">Responsibility</h3>
-        <p class="article__detail_description">{!! post_custom('responsibility'); !!}</p>
+        <p class="article__detail_description">{!! the_field('article_responsibility'); !!}</p>
         <h3 class="article__detail">Created with</h3>
-        <p class="article__detail_description">{!! post_custom('created_with'); !!}</p>
+        <p class="article__detail_description">{!! the_field('article_created_with'); !!}</p>
         <?php
-          $customfield = get_post_meta($post->ID, 'website_url', true);
-          if ($customfield) { ?>
-            <a class="article__link" href="{!! post_custom('website_url'); !!}">See the website</a>
+          if ( get_field('article_source_url') ) { ?>
+            <a class="article__link" href="{!! the_field('article_source_url') !!}">See the website</a>
         <?php } ?>
       </div>
     </div>
   </header>
-    @php
-      if ( has_post_thumbnail() ) {
-        the_post_thumbnail('large', array('class' => 'article__img_xl'));
-      };
-    @endphp
+  <img class="article__img_xl" src="{!! the_field( 'article_eyecatch' ) !!}" />
   <div class="article__main">
     <div class="entry-content">
       <?php
@@ -29,6 +24,25 @@
         remove_filter('the_content', 'wpautop');
         the_content();
       ?>
+
+      <div class="article__links">
+        <?php
+          if ( get_field('article_source_url') && get_field('article_github_url')) {
+        ?>
+          <a class="article__link_button" href="{!! the_field('article_source_url') !!}">See the website</a>
+          <a class="article__link_button" href="{!! the_field('article_github_url') !!}">View Code on Github</a>
+        <?php 
+          } else if ( get_field('article_source_url') ) {
+        ?>
+          <a class="article__link_button" href="{!! the_field('article_source_url') !!}">See the website</a>
+        <?php 
+          } else {
+        ?>
+          <a class="article__link_button" href="{!! the_field('article_github_url') !!}">View Code on Github</a>
+        <?php
+          }
+        ?>
+      </div>
     </div>
   </div>
 

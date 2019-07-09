@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-<?php 
-  $article_eyecatch = get_field('article_eyecatch', '3216')
+<?php
+  $article_eyecatch = get_field('article_eyecatch', '3216');
+  $article_responsibility = get_field('article_responsibility', '3216');
+  $article_created_with = get_field('article_created_with', '3216');
+  $article_source_url = get_field('article_source_url', '3216');
+  $article_github_url = get_field('article_github_url', '3216');
 ?>
-
-<div class="article__overview">
-  <img class="article__eyecatch" src="<?php the_field('article_eyecatch'); ?>" />
-</div>
 
 @section('content')
   @while(have_posts()) 

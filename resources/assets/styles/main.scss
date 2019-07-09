@@ -67,7 +67,7 @@ $breakpoints: (
   "sm": "screen and (min-width: 400px)",
   "md": "screen and (min-width: 600px)",
   "lg": "screen and (min-width: 1000px)",
-  "xl": "screen and (min-width: 1200px)",
+  "xl": "screen and (min-width: 1300px)",
 ) !default;
 
 // to invoke above
@@ -1118,6 +1118,11 @@ section {
       flex-direction: row;
     }
 
+    @include mq(xl) {
+      padding: 0;
+      max-width: 1280px;
+    }
+
     h1 {
       font-size: 2rem;
       line-height: 1.35;
@@ -1233,6 +1238,13 @@ section {
     height: auto;
   }
 
+  &__img_xl {
+    @include mq(lg) {
+      max-height: 640px;
+      object-fit: cover;
+    }
+  }
+
   &__img_lg {
     padding: 15px;
 
@@ -1241,7 +1253,14 @@ section {
     }
 
     @include mq(lg) {
+      display: flex;
+      margin: auto;
       padding: 0 8rem;
+    }
+
+    @include mq(xl) {
+      max-width: 1280px;
+      padding: 0;
     }
   }
 
@@ -1273,6 +1292,12 @@ section {
     }
   }
 
+  &__links {
+    display: flex;
+    justify-content: center;
+    min-width: 45%;
+  }
+
   &__link_button {
     display: inline-block;
     width: 100%;
@@ -1285,7 +1310,6 @@ section {
       width: 45%;
       margin: 5rem 1rem;
       padding: 1.65rem 4rem;
-      float: left;
     }
   }
 }
@@ -1299,6 +1323,12 @@ section {
 
   @include mq(lg) {
     padding: 0 8rem;
+  }
+
+  @include mq(xl) {
+    max-width: 1580px;
+    margin: auto;
+    padding: 2.125rem 8rem;
   }
 
   &__title {
