@@ -21,7 +21,9 @@
       </section>
       <div class="footer__copyright">
         <p>&copy;SZDP <?php echo date(Y);?></p>
-        <a id="scroll__to-top" class="scroll-arrow to-top" href="#header">Top↑</a>
+        <!-- <a id="scroll__to-top" class="scroll-arrow to-top" href="#header">
+          Top
+        </a> -->
       </div>
     <!-- @php dynamic_sidebar('sidebar-footer') @endphp -->
   </div>

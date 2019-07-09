@@ -540,21 +540,35 @@ section {
 }
 
 .scroll-to-main {
-  padding: 2.35rem 2.125rem;
   display: none;
 
   @include mq(lg) {
     display: block;
+    height: 80px;
     text-align: center;
+    margin: 1rem auto;
 
     &::after {
       content: "";
       display: block;
       clear: both;
-      height: 60px;
+      height: 65px;
       width: 1px;
       background: $primary-color;
       margin: 8px auto 0;
+      transition: transform 0.3s ease;
+      animation: scrolling 1.25s linear forwards infinite;
+    }
+
+    @keyframes scrolling {
+      from {
+        top: 0;
+        height: 0;
+      }
+
+      to {
+        bottom: 0;
+      }
     }
   }
 }
@@ -563,6 +577,7 @@ section {
   font-size: $font-sm;
   font-weight: $font-accent;
   line-height: 2;
+  text-transform: uppercase;
 
   @include mq(lg) {
     bottom: 0;
@@ -591,22 +606,22 @@ section {
   position: relative;
   display: inline-block;
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 45%;
-    left: 0;
-    width: 105%;
-    height: 2px;
-    background: $primary-color;
-    transform: scale(0, 1);
-    transform-origin: left top;
-    transition: transform 0.2s;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 45%;
+  //   left: 0;
+  //   width: 105%;
+  //   height: 2px;
+  //   background: $primary-color;
+  //   transform: scale(0, 1);
+  //   transform-origin: left top;
+  //   transition: transform 0.2s;
+  // }
 
-  &:hover::after {
-    transform: scale(1, 1);
-  }
+  // &:hover::after {
+  //   transform: scale(1, 1);
+  // }
 }
 
 .works,

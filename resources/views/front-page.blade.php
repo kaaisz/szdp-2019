@@ -20,7 +20,9 @@
   </div>
 </section>
   <div class="scroll-to-main">
-    <a id="scroll__to-works" class="scroll-arrow to-works" href="#works">Scroll Me</a>
+    <a id="scroll__to-works" class="scroll-arrow to-works" href="#works">
+      Works
+    </a>
   </div>
 
   <section id="works" class="works">
