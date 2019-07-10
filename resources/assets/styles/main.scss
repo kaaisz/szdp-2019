@@ -30,8 +30,8 @@
 }
 
 @font-face {
-  font-family: "Futura-Std";
-  src: url("../woff/FuturaStd-Light.woff");
+  font-family: "Futura-Light";
+  src: url("../woff/Futura-Light-Regular.woff");
 }
 
 @font-face {
@@ -45,7 +45,7 @@ $font-stack-jp: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "Osaka", "
 $font-descriptions: "Helvetica Neue Light", Helvetica, sans-serif;
 $font-descriptions-jp: "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif;
 
-$font-accent: "Futura-Std", "Apercu", "Helvetica Neue Ultra Light", sans-serif;
+$font-accent: "Futura-Light", "Apercu", "Helvetica Neue Ultra Light", sans-serif;
 
 $primary-color:#222;
 $description-color: #555;
@@ -449,7 +449,7 @@ section {
   &__title {
     margin: 1.25rem auto 0.5rem;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 7px;
     text-transform: uppercase;
     line-height: 1.25;
@@ -462,7 +462,7 @@ section {
     @include mq(lg) {
       margin: 0;
       font-size: 64px;
-      letter-spacing: 10px;
+      letter-spacing: 14px;
     }
   }
 
@@ -603,25 +603,9 @@ section {
 
 .scroll-arrow.to-top,
 .scroll-arrow.to-works {
+  font-family: $font-accent;
   position: relative;
   display: inline-block;
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: 45%;
-  //   left: 0;
-  //   width: 105%;
-  //   height: 2px;
-  //   background: $primary-color;
-  //   transform: scale(0, 1);
-  //   transform-origin: left top;
-  //   transition: transform 0.2s;
-  // }
-
-  // &:hover::after {
-  //   transform: scale(1, 1);
-  // }
 }
 
 .works,
