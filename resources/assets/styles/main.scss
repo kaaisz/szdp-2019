@@ -140,6 +140,10 @@ section {
     min-height: 100vh;
     padding: 2.125rem 8rem;
   }
+
+  @include mq(xl) {
+    max-width: 1480px;
+  }
 }
 
 .left,
@@ -163,7 +167,6 @@ section {
   }
 
   @include mq(lg) {
-    max-width: 1580px;
     font-size: $section-title;
     line-height: 1;
     margin: 0 auto 4rem;
@@ -192,7 +195,7 @@ section {
     z-index: 2;
 
     @include mq() {
-      width: 12%;
+      width: 8%;
       margin: -10px 0 0 25px;
     }
 
@@ -421,7 +424,6 @@ section {
 
   @include mq(lg) {
     height: 100vh;
-    max-width: 1480px;
     margin: -8rem auto;
     flex-direction: row;
     align-items: center;
@@ -449,7 +451,7 @@ section {
   &__title {
     margin: 1.25rem auto 0.5rem;
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 7px;
     text-transform: uppercase;
     line-height: 1.25;
@@ -619,7 +621,6 @@ section {
 
   @include mq(lg) {
     padding: 8rem 8rem 0;
-    max-width: 1580px;
     margin: auto;
   }
 }
@@ -1273,16 +1274,27 @@ section {
   }
 
   &__img-wrap {
+    display: block;
+    margin: auto;
+
     @include mq (lg) {
-      display: inline-table;
+      display: flex;
       width: 100%;
       padding: 0 8rem;
+    }
+
+    @include mq(xl) {
+      max-width: 1280px;
     }
   }
 
   &__img_md {
     width: 100%;
     padding: 0 15px;
+
+    @include mq() {
+      padding: 30px;
+    }
 
     @include mq(lg) {
       padding: 0;
@@ -1293,6 +1305,10 @@ section {
   &__img_sm {
     width: 100%;
     padding: 0 15px;
+
+    @include mq() {
+      padding: 30px;
+    }
 
     @include mq(lg) {
       padding: 0;
@@ -1334,7 +1350,6 @@ section {
   }
 
   @include mq(xl) {
-    max-width: 1580px;
     margin: auto;
     padding: 2.125rem 8rem;
   }
@@ -1375,6 +1390,10 @@ section {
     width: 100%;
     max-height: 220px;
     object-fit: cover;
+
+    @include mq() {
+      max-height: 480px;
+    }
 
     @include mq(lg) {
       width: 100%;
@@ -1461,7 +1480,7 @@ section {
 .archive,
 .search {
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding-top: 0;
 
   &__flex-wrap {
@@ -1470,7 +1489,6 @@ section {
 
     @include mq(lg) {
       display: block;
-      max-width: 1580px;
       margin: 0 auto;
     }
   }

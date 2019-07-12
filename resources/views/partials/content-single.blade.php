@@ -33,7 +33,7 @@
     </div>
   </div>
 
-  <div class="related-article">
+  <section class="related-article">
     <h2 class="related-article__title">Other Projects</h2>
     <div class="related-article__content-wrap">
     <?php
@@ -74,7 +74,7 @@
         <p class="pager right">{!! next_post_link('%link', '%title', true, ''); !!}</p>
       <span class="pager__arrow-right"></span>
     </div>
-  </div>
+  </section>
   
   <footer>
     {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
