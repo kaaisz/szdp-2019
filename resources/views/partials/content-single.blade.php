@@ -29,12 +29,10 @@
 
             // to disable <p>
             remove_filter('the_content', 'wpautop');
-
-            // variable
-            // $image = get_sub_field('article_section_image');
           @endphp
           <div class="article__main_content">
             <h2 class="article__section-title">{{ get_sub_field('article_section_title') }}</h2>
+            <h2 class="article__section-subtitle">{{ get_sub_field('article_section_subtitle') }}</h2>
             {!! get_sub_field('article_section_desc') !!}
           </div>
           {!! get_sub_field('article_section_img') !!}
