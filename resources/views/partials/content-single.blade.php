@@ -6,12 +6,12 @@
         {{-- @include('partials/entry-meta') --}}
         <p class="article__description">{!! the_field('article_description'); !!}</p>
         @if ( get_field( 'article_responsibility' ) )
-          <h3 class="article__detail">Responsibility</h3>
-          <p class="article__detail_description">{!! the_field('article_responsibility') !!}</p>
+          <dt class="article__detail">Responsibility</dt>
+          <dd class="article__detail_description">{!! the_field('article_responsibility') !!}</dd>
         @endif
         @if ( get_field( 'article_created_with' ) )
-          <h3 class="article__detail">Created with</h3>
-          <p class="article__detail_description">{!! the_field('article_created_with') !!}</p>
+          <dt class="article__detail">Created with</dt>
+          <dd class="article__detail_description">{!! the_field('article_created_with') !!}</dd>
         @endif
         @if ( get_field('article_source_url') )
           <a class="article__link" href="{!! the_field('article_source_url') !!}">See the website</a>
@@ -32,7 +32,7 @@
           @endphp
           <div class="article__main_content">
             <h2 class="article__section-title">{{ get_sub_field('article_section_title') }}</h2>
-            <h2 class="article__section-subtitle">{{ get_sub_field('article_section_subtitle') }}</h2>
+            <h3 class="article__section-subtitle">{{ get_sub_field('article_section_subtitle') }}</h3>
             {!! get_sub_field('article_section_desc') !!}
           </div>
           {!! get_sub_field('article_section_img') !!}
@@ -44,7 +44,7 @@
   </div>
 
   <section class="related-article">
-    <h2 class="related-article__title">Other Projects</h2>
+    <div class="related-article__title">Other Projects</div>
     <div class="related-article__content-wrap">
     @php
       // if some of categories are set, get either one by random

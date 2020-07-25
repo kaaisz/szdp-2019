@@ -1018,6 +1018,10 @@ section {
     min-height: calc(100vh - 13vh);
   }
 
+  @include mq(xl) {
+    padding: 2.125rem 6rem;
+  }
+
   &__title {
     margin: 2rem 0;
     padding: 0;
@@ -1146,7 +1150,7 @@ section {
       margin: 0;
 
       @include mq(lg) {
-        font-size: 3rem;
+        font-size: 3.5rem;
         margin: 1.25rem 0 0;
       }
     }
@@ -1168,7 +1172,7 @@ section {
 
     @include mq(lg) {
       color: $primary-color;
-      font-size: 20px;
+      font-size: $font-150;
       font-weight: 400;
       margin-bottom: 3rem;
     }
@@ -1187,15 +1191,17 @@ section {
     margin: 0 0 0.5rem;
 
     @include mq(lg) {
-      font-size: 16px;
+      font-family: $font-accent;
+      font-size: 14px;
       margin-bottom: 8px;
     }
 
     &_description {
+      font-family: $font-descriptions;
       margin: 0.5rem 0 2rem;
 
       @include mq(lg) {
-        font-size: 14px;
+        font-size: 16px;
         margin: 0 0 3rem;
       }
     }
@@ -1218,13 +1224,13 @@ section {
   }
 
   &__section-title {
-    font-size: $font-125;
+    font-size: $font-150;
     font-family: $font-stack;
     margin: 0 auto calc(2.5rem - 15px);
 
     @include mq(lg) {
-      font-size: $font-150;
-      margin: 0 auto 4.25rem;
+      font-size: $font-175;
+      margin: 0 auto 3rem;
     }
   }
 
@@ -1235,7 +1241,7 @@ section {
 
     @include mq(lg) {
       font-size: $font-150;
-      margin: 0 auto 4.25rem;
+      margin: 0 auto 2rem;
     }
   }
 
@@ -1248,11 +1254,25 @@ section {
 
     @include mq(lg) {
       max-width: 700px;
-      margin: 4.25rem auto 5rem;
+      margin: 4.25rem auto 0;
     }
 
     & > p {
       font-size: 14px;
+      color: $description-color;
+
+      @include mq(lg) {
+        font-size: 16px;
+      }
+    }
+
+    & > ul {
+      padding-left: 24px;
+    }
+
+    & > ul li {
+      font-family: $font-descriptions;
+      list-style-type: disc;
       color: $description-color;
     }
   }
@@ -1272,6 +1292,7 @@ section {
 
   &__img_xl {
     @include mq(lg) {
+      width: 100%;
       max-height: 640px;
       object-fit: cover;
     }
@@ -1286,13 +1307,11 @@ section {
 
     @include mq(lg) {
       display: flex;
+      flex-direction: column;
       margin: auto;
-      padding: 0 8rem;
-    }
-
-    @include mq(xl) {
-      max-width: 1280px;
       padding: 0;
+      width: 80%;
+      max-width: 1280px;
     }
 
     &.gif {
@@ -1308,6 +1327,7 @@ section {
 
     @include mq() {
       display: flex;
+      flex-direction: column;
       padding: 30px;
       margin: auto;
     }
@@ -1315,6 +1335,10 @@ section {
     @include mq(lg) {
       padding: 0;
       width: 50%;
+
+      img {
+        width: 100%;
+      }
     }
   }
 
@@ -1377,6 +1401,7 @@ section {
   }
 
   @include mq(lg) {
+    margin: 120px 0 0;
     padding: 0 8rem;
   }
 
@@ -1388,6 +1413,8 @@ section {
   &__title {
     text-transform: uppercase;
     letter-spacing: 7px;
+    font-size: 3rem;
+    margin: 0.83em 0;
   }
 
   &__content-wrap {
