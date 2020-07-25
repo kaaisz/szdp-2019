@@ -933,12 +933,20 @@ section {
     font-size: $font-sm;
     color: $description-color;
 
+    @include mq(lg) {
+      font-size: $font-mq;
+    }
+
     &_link_list {
       display: block;
       width: max-content;
       font-size: $font-sm;
       margin: 1em 0;
       border-bottom: 1px solid #222;
+
+      @include mq(lg) {
+        font-size: $font-mq;
+      }
     }
   }
 
@@ -963,6 +971,10 @@ section {
   &__head {
     font-size: 24px;
     margin: 16px 0;
+
+    @include mq(lg) {
+      font-size: 28px;
+    }
   }
 
   &__list {
@@ -971,6 +983,11 @@ section {
     h4 {
       font-size: 16px;
       margin: 0.75rem 0 0.15rem;
+
+      @include mq(lg) {
+        font-size: 18px;
+        margin: 1.125rem 0 0.25rem;
+      }
     }
 
     p {
@@ -1284,27 +1301,15 @@ section {
     }
   }
 
-  &__img-wrap {
-    display: block;
-    margin: auto;
-
-    @include mq (lg) {
-      display: flex;
-      width: 100%;
-      padding: 0 8rem;
-    }
-
-    @include mq(xl) {
-      max-width: 1280px;
-    }
-  }
-
   &__img_md {
     width: 100%;
     padding: 0 15px;
+    margin: auto;
 
     @include mq() {
+      display: flex;
       padding: 30px;
+      margin: auto;
     }
 
     @include mq(lg) {
@@ -1324,6 +1329,21 @@ section {
     @include mq(lg) {
       padding: 0;
       width: 33.333%;
+    }
+  }
+
+  &__img-wrap {
+    display: block;
+    margin: auto;
+
+    @include mq (lg) {
+      display: flex;
+      width: 100%;
+      padding: 0 8rem;
+    }
+
+    @include mq(xl) {
+      max-width: 1280px;
     }
   }
 
