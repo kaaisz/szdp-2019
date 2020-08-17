@@ -1110,6 +1110,77 @@ section {
   }
 }
 
+.archive,
+.search {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 0;
+
+  &__flex-wrap {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(lg) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__img-wrap {
+    width: 100%;
+    margin: 0 0 4rem;
+
+    @include mq(lg) {
+      width: 50%;
+      min-height: 540px;
+      float: left;
+
+      &:nth-of-type(odd) {
+        padding-right: 1rem;
+      }
+
+      &:nth-of-type(even) {
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+
+    @include mq(lg) {
+      max-height: 320px;
+    }
+  }
+
+  &__title {
+    margin: 0.85rem 0;
+    font-size: $font-150;
+    line-height: 1.25;
+  }
+
+  &__tag {
+    font-size: $font-xs;
+    color: $description-color;
+    text-transform: capitalize;
+
+    & > a {
+      color: $secondary-color;
+    }
+
+    @include mq() {
+      font-size: $font-120;
+    }
+
+    @include mq(lg) {
+      font-size: $font-sm;
+      min-height: 3rem;
+    }
+  }
+}
+
 .article {
   margin-top: 90px;
   padding: 0;
@@ -1257,7 +1328,11 @@ section {
       margin: 4.25rem auto 0;
     }
 
-    & > p {
+    & > p,
+    & > ul,
+    & > ul li,
+    & > ul li a {
+      font-family: $font-descriptions;
       font-size: 14px;
       color: $description-color;
 
@@ -1271,9 +1346,11 @@ section {
     }
 
     & > ul li {
-      font-family: $font-descriptions;
       list-style-type: disc;
-      color: $description-color;
+
+      a:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -1295,6 +1372,21 @@ section {
       width: 100%;
       max-height: 640px;
       object-fit: cover;
+    }
+
+    * {
+      width: 100%;
+    }
+
+    figcaption {
+      margin: 0;
+      font-size: 12px;
+      color: #777;
+      text-align: left;
+
+      @include mq(lg) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -1318,12 +1410,40 @@ section {
       max-width: 700px;
       padding: 0;
     }
+
+    * {
+      width: 100%;
+    }
+
+    figcaption {
+      margin: 0;
+      font-size: 12px;
+      color: #777;
+
+      @include mq(lg) {
+        font-size: 14px;
+      }
+    }
   }
 
   &__img_md {
     width: 100%;
     padding: 0 15px;
     margin: auto;
+
+    * {
+      width: 100%;
+    }
+
+    figcaption {
+      margin: 0;
+      font-size: 12px;
+      color: #777;
+
+      @include mq(lg) {
+        font-size: 14px;
+      }
+    }
 
     @include mq() {
       display: flex;
@@ -1335,10 +1455,6 @@ section {
     @include mq(lg) {
       padding: 0;
       width: 50%;
-
-      img {
-        width: 100%;
-      }
     }
   }
 
@@ -1353,6 +1469,21 @@ section {
     @include mq(lg) {
       padding: 0;
       width: 33.333%;
+    }
+
+    * {
+      width: 100%;
+    }
+
+    figcaption {
+      margin: 0;
+      font-size: 12px;
+      color: #777;
+
+      @include mq(lg) {
+        font-size: 14px;
+        // text-align: center;
+      }
     }
   }
 
@@ -1411,10 +1542,14 @@ section {
   }
 
   &__title {
+    font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 7px;
-    font-size: 3rem;
     margin: 0.83em 0;
+
+    @include mq(lg) {
+      font-size: 3rem;
+    }
   }
 
   &__content-wrap {
@@ -1531,77 +1666,6 @@ section {
     @include mq(lg) {
       margin: 0 1.2rem;
       font-size: $font-150;
-    }
-  }
-}
-
-.archive,
-.search {
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 0;
-
-  &__flex-wrap {
-    display: flex;
-    flex-direction: column;
-
-    @include mq(lg) {
-      display: block;
-      margin: 0 auto;
-    }
-  }
-
-  &__img-wrap {
-    width: 100%;
-    margin: 0 0 4rem;
-
-    @include mq(lg) {
-      width: 50%;
-      min-height: 540px;
-      float: left;
-
-      &:nth-of-type(odd) {
-        padding-right: 1rem;
-      }
-
-      &:nth-of-type(even) {
-        padding-left: 1rem;
-      }
-    }
-  }
-
-  &__img {
-    width: 100%;
-    max-height: 220px;
-    object-fit: cover;
-
-    @include mq(lg) {
-      max-height: 320px;
-    }
-  }
-
-  &__title {
-    margin: 0.85rem 0;
-    font-size: $font-150;
-    line-height: 1.25;
-  }
-
-  &__tag {
-    font-size: $font-xs;
-    color: $description-color;
-    text-transform: capitalize;
-
-    & > a {
-      color: $secondary-color;
-    }
-
-    @include mq() {
-      font-size: $font-120;
-    }
-
-    @include mq(lg) {
-      font-size: $font-sm;
-      min-height: 3rem;
     }
   }
 }
